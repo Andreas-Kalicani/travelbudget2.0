@@ -1,11 +1,18 @@
 
 import './App.css';
+import Navbar from './componets/navigation/navbar';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-   <h1>Hello Budget App</h1>
-    </div>
+  <>
+  <Router>
+   < Navbar />
+   <Switch>
+     <Route path="/" />
+     </Switch>
+   </Router>
+    </>
   );
 }
 
