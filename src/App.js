@@ -1,9 +1,9 @@
 
 import './App.css';
-import Navbar from './componets/navigation/navbar';
+import Navbar from './components/navigation/navbar';
 import {Switch, Route} from "react-router-dom"
-import InputForm from "./componets/form/InputForm";
-import './componets/form/InputForm.css'
+import InputForm from "./components/form/InputForm";
+import './components/form/InputForm.css'
 
 function App() {
   return (
