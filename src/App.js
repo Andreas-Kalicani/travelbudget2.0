@@ -1,11 +1,12 @@
 
+
 import './App.css';
 import Navbar from './components/navigation/navbar';
 import {Switch, Route} from "react-router-dom"
 import InputForm from "./components/form/InputForm";
 import './components/form/InputForm.css'
-import AddComponent from './components/dashboard/add-component/AddComponent'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './components/dashboard/Dashboard';
+
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route
           exact path="/dashboard"
           render={props =>
-            <AddComponent {...props} />
+            <Dashboard {...props} />
           }
         />
       </Switch> 
