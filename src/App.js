@@ -1,6 +1,4 @@
 
-
-import './App.css';
 import Navbar from './components/navigation/navbar';
 import {Switch, Route} from "react-router-dom"
 import InputForm from "./components/form/InputForm";

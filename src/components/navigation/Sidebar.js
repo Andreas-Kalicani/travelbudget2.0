@@ -13,7 +13,7 @@ export const Sidebar = [
     }, 
     {
         title: "DashBoard", 
-        path: "/Dashboard", 
+        path: "/dashboard", 
         icon: <MdIcons.MdDashboard />,
         cName: "nav-text"
     }, 
@@ -25,7 +25,7 @@ export const Sidebar = [
     }, 
     {
         title: "Team", 
-        path: "/", 
+        path: "/team", 
         icon: <IoIcons.IoMdPeople />,
         cName: "nav-text"
     }, 
