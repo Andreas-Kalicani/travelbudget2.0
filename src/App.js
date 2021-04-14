@@ -1,18 +1,23 @@
 
 import './App.css';
 import Navbar from './componets/navigation/navbar';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {Switch, Route} from "react-router-dom"
+import InputForm from "./componets/form/InputForm";
+import './componets/form/InputForm.css'
 
 function App() {
   return (
-  <>
-  <Router>
-   < Navbar />
-   <Switch>
-     <Route path="/" />
-     </Switch>
-   </Router>
-    </>
+    <div>
+      <Navbar />
+      <Switch>
+        <Route
+          exact path="/"
+          render={props =>
+            <InputForm {...props} />
+          }
+        />  
+      </Switch> 
+    </div>
   );
 }
 

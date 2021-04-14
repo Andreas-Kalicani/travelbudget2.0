@@ -1,0 +1,12 @@
+.InputForm-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:20px;
+    padding: 20px;
+  }
+.InputForm-form button{
+    margin:10px;
+    padding: 5px;
+}
