@@ -5,14 +5,19 @@ import React from "react";
 import countries from "../datainput/datainput"
 
 
-export default function InputForm(){
+export default function InputForm({
+    inputBudget,
+    setBudget,
+    conversionResult,
+    setConversionResult,
+    originCurrencyCode,
+    destinationCurrencyCode,
+    setOriginCurrencyCode,
+    setDestinationCurrencyCode
+    }){
 
-    const [budget, setBudget] = useState("")
     const [homeCountry, setHomeCountry] = useState("")
     const [destinationCountry, setDestinationCountry] = useState("")
-    const [conversionResult, setConversionResult] =useState(0)
-    const [originCurrencyCode, setOriginCurrencyCode] =useState("")
-    const [destinationCurrencyCode, setDestinationCurrencyCode] =useState("")
     const [apiLoaded, setApiLoaded]= useState(false)
 
   
@@ -49,7 +54,7 @@ export default function InputForm(){
     
     const handleSubmit=(e)=>{
         e.preventDefault()
-        fetch(`https://v6.exchangerate-api.com/v6/343f756238f4dc54c1685159/pair/${originCurrencyCode}/${destinationCurrencyCode}/${budget}`,{
+        fetch(`https://v6.exchangerate-api.com/v6/343f756238f4dc54c1685159/pair/${originCurrencyCode}/${destinationCurrencyCode}/${inputBudget}`,{
             mode:'cors'
         })
             .then(response=> response.json())
@@ -67,10 +72,10 @@ export default function InputForm(){
             <form className="InputForm-form" onSubmit={handleSubmit}>
                 <label>Your Budget</label>
                 <input
-                name="budget"
+                name="inputBudget"
                 type='number'
                 placeholder= "xxx.xxx"
-                value={budget}
+                value={inputBudget}
                 onChange={handleInputBudgetChange}
                 required
                 />
