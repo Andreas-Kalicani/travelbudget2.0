@@ -6,7 +6,8 @@ export default function Dashboard({
     inputBudget,
     conversionResult,
     originCurrencyCode,
-    destinationCurrencyCode
+    destinationCurrencyCode,
+    days
     }) {
     return (
         <div>

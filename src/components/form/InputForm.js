@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react";
 import React from "react";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css"
 
 import countries from "../datainput/datainput"
 
@@ -13,16 +14,58 @@ export default function InputForm({
     originCurrencyCode,
     destinationCurrencyCode,
     setOriginCurrencyCode,
-    setDestinationCurrencyCode
+    setDestinationCurrencyCode,
+    setDays,
+    days
     }){
 
+    const tomorrowDay=()=>{
+        const today = new Date()
+        const tomorrow = new Date(today)
+        return tomorrow.setDate(tomorrow.getDate() + 1)
+    }
+        
+    
+
+
+
+    //States
+    const [startDate, setStartDate] = useState(new Date(Date.now()));
+    const [endDate, setEndDate] = useState(tomorrowDay());
     const [homeCountry, setHomeCountry] = useState("")
     const [destinationCountry, setDestinationCountry] = useState("")
     const [apiLoaded, setApiLoaded]= useState(false)
 
-  
+    // the total number of days of duration of the trip
     
-  
+    setDays (Math.ceil((endDate - startDate.getTime())/(1000*60*60*24)))
+    console.log(days)
+   
+
+  /*   const [totalDays, setTotalDays] = useState("") */ 
+
+    
+
+    //Find the Currency Code of the country Choosen 
+    useEffect(() => {
+        
+        setOriginCurrencyCode (countries.find((country) => country.countryName===homeCountry) ? countries.find((country) => country.countryName===homeCountry).currencyCode  : "Error");
+        
+    }, [homeCountry]);
+
+    
+    useEffect(() => {
+        
+        setDestinationCurrencyCode (countries.find((country) => {
+            return (country.countryName===destinationCountry)
+        }) ? countries.find((country) => country.countryName === destinationCountry).currencyCode : "Error");
+        
+        
+    }, [destinationCountry]);
+
+
+
+    //handlers
 
     const handleInputBudgetChange =(e)=>{
         setBudget(e.target.value);
@@ -32,25 +75,12 @@ export default function InputForm({
         setHomeCountry(e.target.value);  
         
     }
-    useEffect(() => {
-        
-        setOriginCurrencyCode (countries.find((country) => country.countryName===homeCountry) ? countries.find((country) => country.countryName===homeCountry).currencyCode  : "EUR");
-        
-    }, [homeCountry]);
 
     const handleInputDestiny =(e)=>{
-        setDestinationCountry(e.target.value);
+        setDestinationCountry(e.target.value);  
+        
     }
-    useEffect(() => {
-        
-        setDestinationCurrencyCode (countries.find((country) => {
-            return (country.countryName===destinationCountry)
-        }) ? countries.find((country) => country.countryName === destinationCountry).currencyCode : "GBP");
-        
-        
-    }, [destinationCountry]);
-
-
+   
     
     const handleSubmit=(e)=>{
         e.preventDefault()
@@ -64,6 +94,11 @@ export default function InputForm({
             })
             
     } 
+
+    
+    
+
+    
     
 
 
@@ -111,6 +146,24 @@ export default function InputForm({
                         </option>
                     ))}
                 </select>
+                <DatePicker
+                    selected={startDate}
+                    onChange={date => setStartDate(date)}
+                    selectsStart
+                    startDate={startDate}
+                    endDate={endDate}
+                    dateFormat="dd/MM/yyyy"
+
+                />
+                <DatePicker
+                    selected={endDate}
+                    onChange={date => setEndDate(date)}
+                    selectsEnd
+                    startDate={startDate}
+                    endDate={endDate}
+                    minDate={startDate}
+                    dateFormat="dd/MM/yyyy"
+                />
 
             
                 <button type="submit">Send</button>
