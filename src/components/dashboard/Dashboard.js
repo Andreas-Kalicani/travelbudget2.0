@@ -2,6 +2,8 @@ import React from 'react'
 import AddComponent from './add-component/AddComponent'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Charts from './add-component/charts';
+import Chart2 from './chart2';
+import "./dashboard.css"; 
 
 
 export default function Dashboard({
@@ -20,9 +22,11 @@ export default function Dashboard({
                destinationCurrencyCode={destinationCurrencyCode}
          
             />
-           <div>
-             <Charts/>
+           <div className="theCharts">
+           <Charts/>
+           <Chart2/>
             </div>
+           
         </div>
         
 
