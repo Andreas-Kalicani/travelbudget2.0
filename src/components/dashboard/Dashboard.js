@@ -10,8 +10,14 @@ export default function Dashboard({
     }) {
     return (
         <div>
-            <h1>{conversionResult}</h1>
-            <AddComponent />
+            
+            <AddComponent 
+               inputBudget={inputBudget} 
+               conversionResult={conversionResult}
+               originCurrencyCode={originCurrencyCode}
+               destinationCurrencyCode={destinationCurrencyCode}
+         
+            />
         </div>
     )
 }
