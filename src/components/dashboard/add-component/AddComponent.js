@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 
 // import 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'
 // import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'
@@ -8,12 +8,29 @@ import ExpenseTotal from './ExpenseTotal';
 import ExpenseList from './ExpenseList';
 import AddExpenseForm from './AddExpenseForm';
 import{ AppProvider } from '../../../context/AppContext';
+import './statusBudget.css'
+const AddComponent = ({
+  inputBudget,
+  conversionResult,
+  originCurrencyCode,
+  destinationCurrencyCode
+  }) => {
 
-const AddComponent = () => {
+  
   return (
-    <AppProvider>
-    <div className="container">
-      <h1 className="mt-3">My Budget Planner</h1>
+    <AppProvider
+    inputBudget={inputBudget} 
+    conversionResult={conversionResult}
+    originCurrencyCode={originCurrencyCode}
+    destinationCurrencyCode={destinationCurrencyCode}
+     
+    >
+    <div className="status-container">
+      <div className="tp-bar">
+      <div className="travel-avatar"></div>
+      <h2>Your Balance</h2>
+      <div className="btn-modal">Add an expense</div>
+      </div>
       <div className="row mt-3">
         <div className="col-sm">
           <Budget />

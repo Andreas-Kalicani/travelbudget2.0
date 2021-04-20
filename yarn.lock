@@ -2608,7 +2608,11 @@
   dependencies:
     "@types/react" "*"
 
+<<<<<<< HEAD
 "@types/react@*", "@types/react@^16.8.0 || ^17.0.0", "@types/react@^16.8.6 || ^17.0.0":
+=======
+"@types/react@*", "@types/react@^16.8.6 || ^17.0.0":
+>>>>>>> main
   "integrity" "sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-17.0.3.tgz"
   "version" "17.0.3"
@@ -4076,6 +4080,29 @@
   "resolved" "https://registry.npmjs.org/char-regex/-/char-regex-1.0.2.tgz"
   "version" "1.0.2"
 
+"chart.js@^2.3":
+  "integrity" "sha512-B07aAzxcrikjAPyV+01j7BmOpxtQETxTSlQ26BEYJ+3iUkbNKaOJ/nDbT6JjyqYxseM0ON12COHYdU2cTIjC7A=="
+  "resolved" "https://registry.npmjs.org/chart.js/-/chart.js-2.9.4.tgz"
+  "version" "2.9.4"
+  dependencies:
+    "chartjs-color" "^2.1.0"
+    "moment" "^2.10.2"
+
+"chartjs-color-string@^0.6.0":
+  "integrity" "sha512-TIB5OKn1hPJvO7JcteW4WY/63v6KwEdt6udfnDE9iCAZgy+V4SrbSxoIbTw/xkUIapjEI4ExGtD0+6D3KyFd7A=="
+  "resolved" "https://registry.npmjs.org/chartjs-color-string/-/chartjs-color-string-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "color-name" "^1.0.0"
+
+"chartjs-color@^2.1.0":
+  "integrity" "sha512-haqOg1+Yebys/Ts/9bLo/BqUcONQOdr/hoEr2LLTRl6C5LXctUdHxsCYfvQVg5JIxITrfCNUDr4ntqmQk9+/0w=="
+  "resolved" "https://registry.npmjs.org/chartjs-color/-/chartjs-color-2.4.1.tgz"
+  "version" "2.4.1"
+  dependencies:
+    "chartjs-color-string" "^0.6.0"
+    "color-convert" "^1.9.3"
+
 "check-types@^11.1.1":
   "integrity" "sha512-tzWzvgePgLORb9/3a0YenggReLKAIb2owL03H2Xdoe5pKcUyWRSEQ8xfCar8t2SIAuEDwtmx2da1YB52YuHQMQ=="
   "resolved" "https://registry.npmjs.org/check-types/-/check-types-11.1.2.tgz"
@@ -4227,7 +4254,7 @@
     "map-visit" "^1.0.0"
     "object-visit" "^1.0.0"
 
-"color-convert@^1.9.0", "color-convert@^1.9.1":
+"color-convert@^1.9.0", "color-convert@^1.9.1", "color-convert@^1.9.3":
   "integrity" "sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg=="
   "resolved" "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz"
   "version" "1.9.3"
@@ -6534,7 +6561,11 @@
     "minimalistic-assert" "^1.0.0"
     "minimalistic-crypto-utils" "^1.0.1"
 
+<<<<<<< HEAD
 "hoist-non-react-statics@^3.0.0", "hoist-non-react-statics@^3.1.0", "hoist-non-react-statics@^3.3.1", "hoist-non-react-statics@^3.3.2":
+=======
+"hoist-non-react-statics@^3.1.0", "hoist-non-react-statics@^3.3.2":
+>>>>>>> main
   "integrity" "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw=="
   "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   "version" "3.3.2"
@@ -8551,6 +8582,11 @@
   "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
   "version" "1.0.4"
 
+"moment@^2.10.2":
+  "integrity" "sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ=="
+  "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz"
+  "version" "2.29.1"
+
 "move-concurrently@^1.0.1":
   "integrity" "sha1-viwAX9oy4LKa8fBdfEszIUxwH5I="
   "resolved" "https://registry.npmjs.org/move-concurrently/-/move-concurrently-1.0.1.tgz"
@@ -10286,6 +10322,7 @@
     "regenerator-runtime" "^0.13.7"
     "whatwg-fetch" "^3.4.1"
 
+<<<<<<< HEAD
 "react-clientside-effect@^1.2.2":
   "integrity" "sha512-2bL8qFW1TGBHozGGbVeyvnggRpMjibeZM2536AKNENLECutp2yfs44IL8Hmpn8qjFQ2K7A9PnYf3vc7aQq/cPA=="
   "resolved" "https://registry.npmjs.org/react-clientside-effect/-/react-clientside-effect-1.2.5.tgz"
@@ -10303,6 +10340,15 @@
     "prop-types" "^15.7.2"
     "react-onclickoutside" "^6.10.0"
     "react-popper" "^1.3.8"
+=======
+"react-chartjs-2@^2.11.1":
+  "integrity" "sha512-G7cNq/n2Bkh/v4vcI+GKx7Q1xwZexKYhOSj2HmrFXlvNeaURWXun6KlOUpEQwi1cv9Tgs4H3kGywDWMrX2kxfA=="
+  "resolved" "https://registry.npmjs.org/react-chartjs-2/-/react-chartjs-2-2.11.1.tgz"
+  "version" "2.11.1"
+  dependencies:
+    "lodash" "^4.17.19"
+    "prop-types" "^15.7.2"
+>>>>>>> main
 
 "react-dev-utils@^11.0.3":
   "integrity" "sha512-dx0LvIGHcOPtKbeiSUM4jqpBl3TcY7CDjZdfOIcKeznE7BWr9dg0iPG90G5yfVQ+p/rGNMXdbfStvzQZEVEi4A=="
@@ -10536,7 +10582,11 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
+<<<<<<< HEAD
 "react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^15.5.x || ^16.x || ^17.x", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^16.9.0 || ^17", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=0.14.0", "react@>=15", "react@>=16.6.0", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@0.14.x || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@17.0.2":
+=======
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>=15", "react@>=16.6.0", "react@17.0.2":
+>>>>>>> main
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

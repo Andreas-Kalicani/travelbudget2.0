@@ -19,20 +19,26 @@ const AppReducer = (state, action) => {
             return state;
     }
 }
-const initialState  = {
-    budget: 3500,
-    expenses: [
-    ]
-}
+
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {
+   const {conversionResult, destinationCurrencyCode} = props
+
+
+
+    const initialState  = {
+        budget: conversionResult,
+        expenses: [],
+        destinationCurrencyCode: destinationCurrencyCode
+    }
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return(<AppContext.Provider 
         value={{
             budget: state.budget,
             expenses: state.expenses,
+            destinationCurrencyCode: state.destinationCurrencyCode,
             dispatch,
         }}
     >

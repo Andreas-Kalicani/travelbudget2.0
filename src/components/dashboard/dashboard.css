@@ -1,0 +1,7 @@
+.theCharts{
+   height: 400px;  
+   display: flex; 
+   justify-content: space-evenly;
+   margin: 10% 25%;
+}
+
