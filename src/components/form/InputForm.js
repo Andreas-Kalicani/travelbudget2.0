@@ -27,7 +27,8 @@ justify-content:center;
 align-items:center;
 height:100vh;
 padding:0 20px;
-margin-top:200px;
+margin-top:12%;
+margin-bottom:20%;
 `
 const Form = styled.form`
 width:100%;
@@ -170,7 +171,7 @@ export default function InputForm({
         }
         setError(false)
        
-        fetch(`https://v6.exchangerate-api.com/v6/343f756238f4dc54c1685159/pair/${originCurrencyCode}/${destinationCurrencyCode}/${inputBudget}`,{
+        fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${originCurrencyCode}/${destinationCurrencyCode}/${inputBudget}`,{
             mode:'cors'
         })
             .then(response=> response.json())
@@ -299,16 +300,17 @@ export default function InputForm({
                     <Button type="submit">Send</Button>
                 </Form>
                
-
-            </FormWrapper>
-            
-            <div>
+                <div>
                 {
                     apiLoaded &&
                 <h1>Data Return: {isNaN(conversionResult) ? "Introduce un valor" : conversionResult } {destinationCurrencyCode} </h1>
                 }
             
-            </div>
+                </div>
+
+            </FormWrapper>
+            
+            
         </>
     );
 
