@@ -1,12 +1,18 @@
-.InputForm-form{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    margin:20px;
-    padding: 20px;
-  }
-.InputForm-form button{
-    margin:10px;
-    padding: 5px;
+.react-datepicker__input-container input {
+  display:block;
+  width:50%;  
+  padding-left:10px;
+  background-color: #eee;
+  height:40px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 0px 0 20px 0;
+  box-sizing: border-box;
+}
+
+.react-datepicker-wrapper{
+  display:block;
+  width:100%;  
+ 
+
 }

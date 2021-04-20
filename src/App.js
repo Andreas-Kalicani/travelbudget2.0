@@ -12,6 +12,7 @@ function App() {
   const [conversionResult, setConversionResult] =useState(0);
   const [originCurrencyCode, setOriginCurrencyCode] =useState("");
   const [destinationCurrencyCode, setDestinationCurrencyCode] =useState("");
+  const [days, setDays] =useState("");
 
   return (
     <div>
@@ -29,6 +30,8 @@ function App() {
             destinationCurrencyCode={destinationCurrencyCode}
             setOriginCurrencyCode={setOriginCurrencyCode}
             setDestinationCurrencyCode={setDestinationCurrencyCode}
+            setDays={setDays}
+            days={days}
             {...props} />
           }
         />
@@ -40,6 +43,7 @@ function App() {
             conversionResult={conversionResult}
             originCurrencyCode={originCurrencyCode}
             destinationCurrencyCode={destinationCurrencyCode}
+            days={days}
             {...props} />
           }
         />
