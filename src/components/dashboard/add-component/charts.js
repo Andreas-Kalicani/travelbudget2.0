@@ -4,8 +4,8 @@ import {Doughnut} from "react-chartjs-2";
 
 const Charts = (props) =>{
     return (
-        <div className="chart1">
-    <Doughnut   height={400} width={0} data = {{
+        
+    <Doughnut className="chart1" height={50} width={0} data = {{
         labels: ["My Budget", "Expenses"], 
        
         datasets: [
@@ -33,7 +33,7 @@ const Charts = (props) =>{
         
     }}
   />
-  </div>
+
 )
 
     
