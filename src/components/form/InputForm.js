@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import countries from "../datainput/datainput";
 import styled, {createGlobalStyle, css} from 'styled-components';
+import {tomorrowDay} from "../../helper/functions"
 
 
 const GlobalStyle =createGlobalStyle`
@@ -85,7 +86,6 @@ margin-bottom: 2rem;
 `;
 
 
-
 export default function InputForm({
     inputBudget,
     setBudget,
@@ -99,15 +99,6 @@ export default function InputForm({
     days
     }){
 
-    const tomorrowDay=()=>{
-        const today = new Date()
-        const tomorrow = new Date(today)
-        return tomorrow.setDate(tomorrow.getDate() + 1)
-    }
-        
-    
-
-
 
     //States
     const [startDate, setStartDate] = useState(new Date(Date.now()));
@@ -120,7 +111,6 @@ export default function InputForm({
     // the total number of days of duration of the trip
     
     setDays (Math.ceil((endDate - startDate.getTime())/(1000*60*60*24)))
-    console.log(days)
    
 
   /*   const [totalDays, setTotalDays] = useState("") */ 
@@ -181,12 +171,6 @@ export default function InputForm({
             })
             
     } 
-
-    
-   
-    
-
-    
 
     return (
         <>
