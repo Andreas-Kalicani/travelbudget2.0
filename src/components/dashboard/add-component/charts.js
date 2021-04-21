@@ -2,15 +2,20 @@ import React from "react";
 import {Doughnut} from "react-chartjs-2"; 
 
 
-const Charts = (props) =>{
+const Charts = ({inputBudget,
+    conversionResult,
+    originCurrencyCode,
+    destinationCurrencyCode,
+    days}) =>{
+        
     return (
         
     <Doughnut className="chart1" height={50} width={0} data = {{
-        labels: ["My Budget", "Expenses"], 
+        labels: ["My Budget"], 
        
         datasets: [
             {
-                data: [90, 10],
+                data: [inputBudget],
                 label: "first dataset", 
                 backgroundColor: ['rgb(54, 162, 235)',  'rgb(255, 99, 132)'],
                

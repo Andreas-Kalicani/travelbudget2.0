@@ -13,6 +13,8 @@ export default function Dashboard({
     destinationCurrencyCode,
     days
     }) {
+
+      
     return (
         <div>
             
@@ -24,7 +26,12 @@ export default function Dashboard({
          
             />
            <div className="theCharts">
-           <Charts/>
+           <Charts 
+           inputBudget={inputBudget} 
+           conversionResult={conversionResult}
+           originCurrencyCode={originCurrencyCode}
+           destinationCurrencyCode={destinationCurrencyCode}
+           days={days} />
            <Chart2/>
             </div>
            
