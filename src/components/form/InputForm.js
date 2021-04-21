@@ -21,6 +21,7 @@ const sharedStyles = css`
     border: 1px solid #ddd;
     margin: 0px 0 20px 0;
     box-sizing: border-box;
+    
 `
 const FormWrapper = styled.div`
 display:flex;
@@ -28,19 +29,31 @@ justify-content:center;
 align-items:center;
 height:100vh;
 padding:0 20px;
-margin-top:12%;
+margin-top:150px;
 margin-bottom:20%;
 `
 const Form = styled.form`
 width:100%;
 max-width:700px;
 padding:40px;
+color:${props=>props.theme.colors.primary}; 
 background-color:#fff;
 border-radius:10px;
 box-sizing: border-box;
 box-shadow:${props=>props.theme.boxShadow}; 
 /* box-shadow: 0px 0px 20px 0px rgba(0,0,0, 0.2); */
 `
+
+const H2 =styled.h2`
+    font-family:Arial;
+    
+`;
+
+const Label =styled.label`
+    font-family:"Verdana";
+    font-size:0.9rem;
+    
+`;
 const Input = styled.input`
     display:block;
     width:100%;
@@ -49,11 +62,11 @@ const Input = styled.input`
 `
 const Button = styled.button`
     display:block;
-    background-color:#00838F;
+    background-color:${props=>props.theme.colors.button};
     font-size: .9rem;
     width:25%;
     height:40px;
-    color: #fff;
+    color: ${props=>props.theme.colors.secondary};
     text-transform:uppercase;
     font-weight:bold;
     border:none;
@@ -64,7 +77,7 @@ const Button = styled.button`
     transition: background-color .3s ease;
    
     &:hover{
-        background-color:#26C6DA;
+        background-color:${props=>props.theme.colors.buttonHover};
         cursor:pointer;
     }
 `
@@ -169,10 +182,10 @@ export default function InputForm({
                 
                 <Form className="InputForm-form" onSubmit={handleSubmit}>
                 {error? <Error>All fields are required</Error> : null }
-                    <h2>Create your budget</h2>
+                    <H2>Create your budget</H2>
                     <hr/>
 
-                    <label>Budget Name</label>
+                    <Label>Budget Name</Label>
                     <Input
                     name="inputBudget"
                     type='text'
@@ -181,7 +194,7 @@ export default function InputForm({
                     onChange={handleInputBudgetNameChange} */
                     /* required */
                     />
-                    <label>Your Budget</label>
+                    <Label>Your Budget</Label>
                     <Input
                     name="inputBudget"
                     type='number'
@@ -192,7 +205,7 @@ export default function InputForm({
                     />
                     
 
-                    <label>Select your Origin country</label>
+                    <Label>Select your Origin country</Label>
                     <Select 
                     placeholder= "Choose a country"
                     value={homeCountry}  
@@ -209,7 +222,7 @@ export default function InputForm({
                     </Select>
                     
 
-                    <label>Select your country destination</label>
+                    <Label>Select your country destination</Label>
                     <Select 
                     placeholder= "Choose a country"
                     value={destinationCountry} 
@@ -225,7 +238,7 @@ export default function InputForm({
                         ))}
                     </Select>
 
-                    <label>Number of people</label>
+                    <Label>Number of people</Label>
                     <Select 
                     placeholder= "1"
                     /* value={destinationCountry}  */
@@ -248,7 +261,7 @@ export default function InputForm({
                         
                     </Select>
 
-                    <label>Depart Day</label>
+                    <Label>Depart Day</Label>
     
                     <DatePicker
                     selected={startDate}
@@ -259,7 +272,7 @@ export default function InputForm({
                     dateFormat="dd/MM/yyyy"
                     />
                     
-                    <label>Return Day</label>
+                    <Label>Return Day</Label>
                     <DatePicker
                         selected={endDate}
                         onChange={date => setEndDate(date)}
