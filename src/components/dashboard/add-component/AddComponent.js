@@ -7,24 +7,12 @@ import Remaining from './Remaining'
 import ExpenseTotal from './ExpenseTotal';
 import ExpenseList from './ExpenseList';
 import AddExpenseForm from './AddExpenseForm';
-import{ AppProvider } from '../../../context/AppContext';
 import './statusBudget.css'
-const AddComponent = ({
-  inputBudget,
-  conversionResult,
-  originCurrencyCode,
-  destinationCurrencyCode
-  }) => {
+const AddComponent = () => {
 
   
   return (
-    <AppProvider
-    inputBudget={inputBudget} 
-    conversionResult={conversionResult}
-    originCurrencyCode={originCurrencyCode}
-    destinationCurrencyCode={destinationCurrencyCode}
-     
-    >
+
     <div className="status-container">
       <div className="tp-bar">
       <div className="travel-avatar"></div>
@@ -56,7 +44,6 @@ const AddComponent = ({
       </div>
     </div>
       
-    </AppProvider>
 
   );
 }
