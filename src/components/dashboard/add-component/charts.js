@@ -3,6 +3,7 @@ import {Doughnut} from "react-chartjs-2";
 
 
 const Charts = (props) =>{
+  
     return (
         
     <Doughnut className="chart1" height={50} width={0} data = {{
