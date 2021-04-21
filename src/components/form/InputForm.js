@@ -1,8 +1,8 @@
-import { useState, useEffect} from "react";
+import { useState} from "react";
 import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import countries from "../datainput/datainput";
+import countries from "../../data/datainput";
 import styled, {createGlobalStyle, css} from 'styled-components';
 import {tomorrowDay} from "../../helper/functions"
 
@@ -38,7 +38,8 @@ padding:40px;
 background-color:#fff;
 border-radius:10px;
 box-sizing: border-box;
-box-shadow: 0px 0px 20px 0px rgba(0,0,0, 0.2);
+box-shadow:${props=>props.theme.boxShadow}; 
+/* box-shadow: 0px 0px 20px 0px rgba(0,0,0, 0.2); */
 `
 const Input = styled.input`
     display:block;
@@ -109,31 +110,19 @@ export default function InputForm({
     const [error, setError] =useState(false)
 
     // the total number of days of duration of the trip
-    
     setDays (Math.ceil((endDate - startDate.getTime())/(1000*60*60*24)))
-   
-
-  /*   const [totalDays, setTotalDays] = useState("") */ 
-
     
 
     //Find the Currency Code of the country Choosen 
-    useEffect(() => {
-        
-        setOriginCurrencyCode (countries.find((country) => country.countryName===homeCountry) ? countries.find((country) => country.countryName===homeCountry).currencyCode  : "Error");
-        
-    }, [homeCountry]);
 
-    
-    useEffect(() => {
-        
-        setDestinationCurrencyCode (countries.find((country) => {
-            return (country.countryName===destinationCountry)
-        }) ? countries.find((country) => country.countryName === destinationCountry).currencyCode : "Error");
-        
-        
-    }, [destinationCountry]);
+    setOriginCurrencyCode (countries.find((country) => 
+        country.countryName===homeCountry) ? countries.find((country) => 
+        country.countryName===homeCountry).currencyCode  : "Error");
 
+    setDestinationCurrencyCode (countries.find((country) => 
+        country.countryName===destinationCountry
+        ) ? countries.find((country) => 
+        country.countryName === destinationCountry).currencyCode : "Error");
 
 
     //handlers
@@ -160,6 +149,7 @@ export default function InputForm({
             return;
         }
         setError(false)
+        
        
         fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${originCurrencyCode}/${destinationCurrencyCode}/${inputBudget}`,{
             mode:'cors'
