@@ -2,7 +2,7 @@ import { useState} from "react";
 import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import countries from "../datainput/datainput";
+import countries from "../../data/datainput";
 import styled, {createGlobalStyle, css} from 'styled-components';
 import {tomorrowDay} from "../../helper/functions"
 
@@ -38,7 +38,8 @@ padding:40px;
 background-color:#fff;
 border-radius:10px;
 box-sizing: border-box;
-box-shadow: 0px 0px 20px 0px rgba(0,0,0, 0.2);
+box-shadow:${props=>props.theme.boxShadow}; 
+/* box-shadow: 0px 0px 20px 0px rgba(0,0,0, 0.2); */
 `
 const Input = styled.input`
     display:block;
