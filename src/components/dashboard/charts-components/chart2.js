@@ -13,10 +13,7 @@ const Chart2 = (props) => {
                     
                 }]
             }}
-            
             />
-
-        
     )
 }
 
