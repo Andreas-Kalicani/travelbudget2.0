@@ -1,11 +1,13 @@
+import { formatMs } from "@material-ui/core";
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import "../fonts/Montserrat"
+
 
 const theme = {
     colors : {
         primary : "#060B26",
         secondary : "#FFFFFF",
+        red: "#FF2900",
         orange: "#FF662F",
         grey:"#EEEEEE",
         button: "#2991cc",

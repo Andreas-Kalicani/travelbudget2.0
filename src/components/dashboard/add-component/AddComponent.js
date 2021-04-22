@@ -8,7 +8,8 @@ import ExpenseTotal from './ExpenseTotal';
 import ExpenseList from './ExpenseList';
 import AddExpenseForm from './AddExpenseForm';
 import './statusBudget.css'
-import styled, {createGlobalStyle, css} from 'styled-components';
+import styled from 'styled-components';
+
 
 const Container = styled.div`
   width: 100%;
@@ -57,9 +58,6 @@ const ExpensesListContainer = styled.div`
 
 
 `
-
-
-
 
 
 const AddComponent = () => {
