@@ -3,7 +3,7 @@ import { AppContext } from '../../../context/AppContext';
 import {v4 as uuid4 } from 'uuid';
 // material-ui imports below
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+/* import Button from '@material-ui/core/Button'; */
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
@@ -11,6 +11,7 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import styled from 'styled-components';
 
 // style components below
 const styles = (theme) => ({
@@ -24,7 +25,29 @@ const styles = (theme) => ({
       top: theme.spacing(1),
       color: theme.palette.grey[500],
     },
-  });
+  }); 
+
+  const Button = styled.button`
+  display:block;
+  background-color:${props=>props.theme.colors.button};
+  font-size: .9rem;
+  width:35%;
+  height:auto;
+  color: ${props=>props.theme.colors.secondary};
+  text-transform:uppercase;
+  font-weight:bold;
+  border:none;
+  border-radius: 5px;
+  margin-top:10px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color .3s ease;
+ 
+  &:hover{
+      background-color:${props=>props.theme.colors.buttonHover};
+      cursor:pointer;
+  }
+`
 // Dialog title
 const DialogTitle = withStyles(styles)((props) => {
     const { children, classes, onClose, ...other } = props;
@@ -90,9 +113,9 @@ const AddExpenseForm = () => {
 
     return (
         <>
-        <Button variant="outlined" color="primary" onClick={handleClickOpen} className="btn-modal">
+        <Button onClick={handleClickOpen} className="btn-modal">
         Add an expense
-      </Button>
+        </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           Modal title

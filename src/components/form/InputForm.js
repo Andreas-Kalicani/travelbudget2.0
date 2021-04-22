@@ -27,10 +27,20 @@ const FormWrapper = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-padding:0 20px;
-margin-top:150px;
-margin-bottom:20%;
+height:70vh;
+/* padding:0 20px; */
+margin-top: 10px;
+/* margin-bottom:20%; */
+@media (max-height: 1060px) {
+    height: 90vh;
+  }
+
+  @media (max-height: 862x) {
+    height: 100vh;
+    
+  }
+
+
 `
 const Form = styled.form`
 width:100%;
@@ -41,11 +51,30 @@ background-color:#fff;
 border-radius:10px;
 box-sizing: border-box;
 box-shadow:${props=>props.theme.boxShadow}; 
-/* box-shadow: 0px 0px 20px 0px rgba(0,0,0, 0.2); */
+@media (max-height: 1250px) {
+    margin-top: 100px;
+  }
+
+  @media (max-height: 862px) {
+    
+    margin-top:300px;
+  }
+  
+  
 `
 
 const H2 =styled.h2`
     font-family:Arial;
+    
+`;
+
+const Container =styled.div`
+    margin-top:70px;
+    @media (max-height: 800px) {
+        margin-top:20px;
+  }
+  
+  
     
 `;
 
@@ -176,7 +205,7 @@ export default function InputForm({
     } 
 
     return (
-        <>
+        <Container>
             <GlobalStyle/>
             <FormWrapper>
                 
@@ -298,7 +327,7 @@ export default function InputForm({
             </FormWrapper>
             
             
-        </>
+        </Container>
     );
 
 
