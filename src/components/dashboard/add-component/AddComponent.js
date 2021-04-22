@@ -13,7 +13,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  min-height:300px;
+  min-height:100px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 1rem!important;
@@ -34,6 +34,7 @@ const H2 = styled.h2`
   flex-wrap: wrap;
   color:${props=>props.theme.colors.primary}; 
   border: 1px solid #ddd;
+  
 
 
 `
@@ -50,7 +51,7 @@ const ButtonWrapper = styled.div`
 
 `
 const ExpensesListContainer = styled.div`
-  margin-top: 1rem!important;
+ /*  margin-top: 1rem!important; */
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -71,7 +72,7 @@ const AddComponent = () => {
       <h2>Your Balance</h2>
       <div className="btn-modal">Add an expense</div>
       </div> */}
-      <div className="row mt-3">
+      {/* <div className="row mt-3">
         <div className="col-sm">
           <Budget />
         </div>
@@ -81,7 +82,7 @@ const AddComponent = () => {
         <div className="col-sm">
           <ExpenseTotal />
         </div>
-      </div>
+      </div> */}
       {/* <h3 className="mt-3">Expenses</h3> */}
       <ExpensesListContainer>
         <div className="col-sm">

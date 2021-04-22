@@ -28,8 +28,36 @@ const ExpenseItemAmount = styled.span`
     vertical-align: baseline;
     border-radius: .50rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #FF2900;
+    color: ${props=>props.theme.colors.red};
     margin-right: 1rem!important;
+
+`
+
+const ItemLi = styled.li`
+    text-align: -webkit-match-parent;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    font-weight:bold;
+    color:${props=>props.theme.colors.primary};
+    /* &:last-child{
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    }
+
+    &:last-child{
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    }
+ */
 
 `
 
@@ -44,16 +72,18 @@ const ExpenseItem = (props) => {
 
     }
 
+
+
     return (
-        <li className="list-group-item d-flex justify-content-between align-items-center">
+        <ItemLi>
             {props.name}
-            <div className="">
+            <div>
                 <ExpenseItemAmount>
-                    - {destinationCurrencyCode}{props.cost}    
+                    - {props.cost}  {destinationCurrencyCode}   
                 </ExpenseItemAmount>
                 <TiDelete size="1.5em" onClick={handleDeleteExpense}></TiDelete>
             </div>
-        </li>
+        </ItemLi>
     )
 }
 

@@ -89,11 +89,18 @@ const ModalContent = styled.div`
   flex-direction:column;
   justify-content:center;
   
- 
-
-
 `
-
+const Select =styled.select`
+    display:block;
+    width:100%;
+    padding-left:20px;
+    background-color: #eee;
+    height:40px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 0px 0 20px 0;
+    box-sizing: border-box; 
+`;
 
 const Label =styled.label`
     font-family:"Verdana";
@@ -196,6 +203,31 @@ const AddExpenseForm = () => {
                         value={cost}
                         onChange={event=> setCost(event.target.value)}
                     />
+                </div>
+                <div className="col-sm">
+                    <Label for="cost">Category</Label>
+                    <Select 
+
+                        required="required" 
+                        type="text"  
+                        id="category"
+                        value="{category}"
+                        /* onChange={event=> setCost(event.target.value)} */
+                    >
+                      <option value ="" disabled hidden>Choose a category </option>
+                      <option key={1} value="Food">
+                              Food
+                      </option>
+                      <option key={2} value="Trasport">
+                              Trasport
+                      </option>
+
+                      {/* {countries.map(option => (
+                          <option key={option.countryCode} value={option.countryName}>
+                              {option.countryName}
+                          </option>
+                      ))} */}
+                    </Select>
                 </div>
                 <ButtonWrapper>
                     <ModalButton type="submit" onClick={handleClose} autoFocus>Save</ModalButton>
