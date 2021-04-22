@@ -6,6 +6,7 @@ const AppReducer = (state, action) => {
             return {
                 ...state,
                 expenses: [...state.expenses, action.payload],
+                
             };
         case 'DELETE_EXPENSE':
             return {
@@ -30,7 +31,7 @@ export const AppProvider = (props) => {
     days} = props
 
 
-
+    const categories = ['food', 'entertainments', 'etc']
     const initialState  = {
         budget: conversionResult,
         expenses: [],
@@ -43,6 +44,7 @@ export const AppProvider = (props) => {
             budget: state.budget,
             expenses: state.expenses,
             destinationCurrencyCode: state.destinationCurrencyCode,
+            categories: categories,
             dispatch,
         }}
     >
