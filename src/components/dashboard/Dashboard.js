@@ -1,9 +1,10 @@
 import React from 'react'
 import AddComponent from './add-component/AddComponent'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Charts from './add-component/charts';
-import Chart2 from './chart2';
+import Charts from './charts-components/charts';
+import Chart2 from './charts-components/chart2';
 import "./dashboard.css"; 
+import { AppProvider } from '../../context/AppContext';
 
 
 export default function Dashboard({
@@ -17,14 +18,13 @@ export default function Dashboard({
       
     return (
         <div>
-            
-            <AddComponent 
-               inputBudget={inputBudget} 
-               conversionResult={conversionResult}
-               originCurrencyCode={originCurrencyCode}
-               destinationCurrencyCode={destinationCurrencyCode}
-         
-            />
+        <AppProvider
+                       inputBudget={inputBudget} 
+                       conversionResult={conversionResult}
+                       originCurrencyCode={originCurrencyCode}
+                       destinationCurrencyCode={destinationCurrencyCode}
+        >
+            <AddComponent />
            <div className="theCharts">
            <Charts 
            inputBudget={inputBudget} 
@@ -34,7 +34,7 @@ export default function Dashboard({
            days={days} />
            <Chart2/>
             </div>
-           
+        </AppProvider> 
         </div>
         
 
