@@ -23,7 +23,11 @@ const AppReducer = (state, action) => {
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {
-   const {conversionResult, destinationCurrencyCode} = props
+   const {inputBudget,
+    conversionResult,
+    originCurrencyCode,
+    destinationCurrencyCode,
+    days} = props
 
 
 

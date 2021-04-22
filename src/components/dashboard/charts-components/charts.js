@@ -1,21 +1,24 @@
-import React from "react"; 
+import React, { useContext } from "react"; 
 import {Doughnut} from "react-chartjs-2"; 
+import { AppContext } from '../../../context/AppContext';
 
 
-const Charts = ({inputBudget,
-    conversionResult,
-    originCurrencyCode,
-    destinationCurrencyCode,
-    days}) =>{
-        
+const Charts = () =>{
+      const { budget, inputBudget, expenses } = useContext(AppContext);  // do we need InputBudget ?
+      const totalExpenses = expenses.reduce((total, item)=>{
+        return (total += item.cost);
+    }, 0);
     return (
-        
+    // <div>
+    //   {/* This is to visually see changes dynamically, lets delete when we are sure it works */}
+    //   <p>Budget: {budget} Spent: {totalExpenses}</p> 
+      
     <Doughnut className="chart1" height={50} width={0} data = {{
         labels: ["My Budget"], 
        
         datasets: [
             {
-                data: [inputBudget],
+                data: [budget, totalExpenses],
                 label: "first dataset", 
                 backgroundColor: ['rgb(54, 162, 235)',  'rgb(255, 99, 132)'],
                
@@ -38,6 +41,7 @@ const Charts = ({inputBudget,
         
     }}
   />
+  // </div> {/* Lets forget about this div for now */}
 
 )
 
