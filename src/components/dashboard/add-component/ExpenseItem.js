@@ -2,6 +2,12 @@ import React, { useContext } from 'react';
 import { TiDelete } from 'react-icons/ti';
 import { AppContext } from '../../../context/AppContext';
 import styled from 'styled-components';
+import RestaurantIcon from '@material-ui/icons/Restaurant';
+import DriveEtaIcon from '@material-ui/icons/DriveEta';
+import HotelIcon from '@material-ui/icons/Hotel';
+import LocalPharmacyIcon from '@material-ui/icons/LocalPharmacy';
+import LocalActivityIcon from '@material-ui/icons/LocalActivity';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 const ExpenseItemAmount = styled.span`
     /* display: inline-block;
@@ -61,6 +67,12 @@ const ItemLi = styled.li`
 
 `
 
+const DescriptionContainer = styled.div`
+    
+    margin-left:20%;
+
+`
+
 const ExpenseItem = (props) => {
     const { dispatch, destinationCurrencyCode } = useContext(AppContext);
 
@@ -76,7 +88,10 @@ const ExpenseItem = (props) => {
 
     return (
         <ItemLi>
-            {props.name}
+            <HotelIcon/>
+            <DescriptionContainer>
+                {props.name}
+            </DescriptionContainer>
             <div>
                 <ExpenseItemAmount>
                     - {props.cost}  {destinationCurrencyCode}   

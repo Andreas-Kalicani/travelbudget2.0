@@ -221,6 +221,21 @@ const AddExpenseForm = () => {
                       <option key={2} value="Trasport">
                               Trasport
                       </option>
+                      <option key={2} value="Accomodation">
+                      Accomodation
+                      </option>
+                      <option key={2} value="Activities">
+                      Activities
+                      </option>
+                      <option key={2} value="Insurance">
+                      Insurance
+                      </option>
+                      <option key={2} value="Gifts">
+                      Gifts
+                      </option>
+                      <option key={2} value="Others">
+                      Others
+                      </option>
 
                       {/* {countries.map(option => (
                           <option key={option.countryCode} value={option.countryName}>
