@@ -1,6 +1,7 @@
 import React, { useContext } from "react"; 
 import {Doughnut} from "react-chartjs-2"; 
 import { AppContext } from '../../../context/AppContext';
+import "./chart2.css"
 
 
 const Charts = () =>{
@@ -12,7 +13,7 @@ const Charts = () =>{
     // <div>
     //   {/* This is to visually see changes dynamically, lets delete when we are sure it works */}
     //   <p>Budget: {budget} Spent: {totalExpenses}</p> 
-      
+     <div className="chartnigga"> 
     <Doughnut className="chart1" height={50} width={0} data = {{
         labels: ["My Budget"], 
        
@@ -41,6 +42,7 @@ const Charts = () =>{
         
     }}
   />
+  </div>
   // </div> {/* Lets forget about this div for now */}
 
 )
