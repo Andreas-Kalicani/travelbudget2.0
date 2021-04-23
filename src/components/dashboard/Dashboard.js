@@ -30,8 +30,18 @@ export default function Dashboard({
         destinationCurrencyCode={destinationCurrencyCode}
 >   
        <Box/>
-        <ChartBox/>
-    {/* <AddComponent /> */}
+       <ChartBox/>
+
+       {/* the code from Box and ChartBox needs double-checking 
+       because it's collapsing everytime we add an expense, 
+       when both commented, the add component works fine and displays data 
+       accordinigly,
+       */}
+
+    {/* <AddComponent />
+    <Charts />
+    <Chart2 />  */}
+
            <div className="theCharts">
          {/* <Charts 
            inputBudget={inputBudget} 
