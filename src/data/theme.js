@@ -6,7 +6,9 @@ const theme = {
         primary : "#060B26",
         secondary : "#FFFFFF",
         orange: "#FF662F",
-        grey:"#EEEEEE"
+        grey:"#EEEEEE",
+        button: "#2991cc",
+        buttonHover:"#060B26"
     },
     largeViewport : {
         size: "1000px", // to be used as min-width in media queries
