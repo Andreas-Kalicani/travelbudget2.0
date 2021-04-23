@@ -18,7 +18,7 @@ const Chart2 = (props) => {
             <Doughnut className="chart2" height={400} width={0} data={{
                 labels: ["expenses"], 
                 datasets:[{
-                    data: [categoryExpense.food, categoryExpense.entertainments, category.etc],
+                    data: [categoryExpense.food, categoryExpense.entertainments, categoryExpense.etc],
                     label: "first dataset", 
                     backgroundColor: ["red", "blue"]
                     
