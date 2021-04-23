@@ -1,11 +1,14 @@
 import React from "react"; 
 import {Doughnut} from "react-chartjs-2"; 
+import "./chart2.css"
 
 const Chart2 = (props) => {
     return (
-        
-            <Doughnut className="chart2" height={400} width={0} data={{
-                labels: ["expenses"], 
+           
+           <div className="chartnigga">
+            <Doughnut 
+             options={{responsive: true, maintainAspectRatio: false}} height={50} data={{
+                labels: ["expenses", "budget"], 
                 datasets:[{
                     data: [90, 10],
                     label: "first dataset", 
@@ -14,6 +17,7 @@ const Chart2 = (props) => {
                 }]
             }}
             />
+           </div>
     )
 }
 
