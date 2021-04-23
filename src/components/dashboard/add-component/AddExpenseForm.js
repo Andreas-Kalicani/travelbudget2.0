@@ -69,10 +69,14 @@ const AddExpenseForm = () => {
     };
 
     //add expense action
-    const { dispatch } = useContext(AppContext);
+    const { dispatch, categories } = useContext(AppContext);
+
+    // States of expense
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
+    const [category, setCategory] = useState('');
 
+    // On submit
     const onSubmit = (event) => {
         event.preventDefault();
 
@@ -80,6 +84,7 @@ const AddExpenseForm = () => {
             id: uuid4(),
             name: name,
             cost: parseInt(cost),
+            category: category,
         }
 
         dispatch({
@@ -122,6 +127,19 @@ const AddExpenseForm = () => {
                         onChange={event=> setCost(event.target.value)}
                     ></input>
                 </div>
+                <select 
+                        className="form-control"
+                        name={category}
+                        onChange={event=> setCategory(event.target.value)}
+                    >
+                        <option value="">-- Selecciona Categoría --</option>
+                        {categories.map(category => (
+                            <option 
+                                key={category} 
+                                value={category} 
+                            >{category}</option>
+                        ))}
+                 </select>
                 <div className="col-sm">
                     <button type="submit" className="btn-modal" onClick={handleClose} autoFocus>Save</button>
                 </div>
