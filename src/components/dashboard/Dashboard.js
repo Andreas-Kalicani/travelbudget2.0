@@ -29,9 +29,12 @@ export default function Dashboard({
         originCurrencyCode={originCurrencyCode}
         destinationCurrencyCode={destinationCurrencyCode}
 >   
-       <Box/>
-        <ChartBox/>
-    {/* <AddComponent /> */}
+       {/* <Box/>
+        <ChartBox/> */}
+
+    <AddComponent />
+    <Charts />
+    <Chart2 />
            <div className="theCharts">
          {/* <Charts 
            inputBudget={inputBudget} 
