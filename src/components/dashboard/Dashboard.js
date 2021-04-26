@@ -8,6 +8,8 @@ import { AppProvider } from '../../context/AppContext';
 import { ThemeProvider } from "styled-components";
 import Box from "./Box";
 import ChartBox from "./ChartBox"; 
+import Horizentalchart from "./charts-components/Horizentalchart"; 
+import "./dashboard.css"; 
 
 export default function Dashboard({
     inputBudget,
@@ -28,10 +30,11 @@ export default function Dashboard({
         conversionResult={conversionResult}
         originCurrencyCode={originCurrencyCode}
         destinationCurrencyCode={destinationCurrencyCode}
->   
+> 
        <Box/>
        <ChartBox/>
-
+       <Horizentalchart/>
+       
        {/* the code from Box and ChartBox needs double-checking 
        because it's collapsing everytime we add an expense, 
        when both commented, the add component works fine and displays data 
