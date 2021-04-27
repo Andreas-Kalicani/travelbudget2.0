@@ -2,9 +2,9 @@ import React, { useCallback, useEffect } from 'react';
 
 // import 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'
 // import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'
-import Budget from './Budget';
-import Remaining from './Remaining'
-import ExpenseTotal from './ExpenseTotal';
+// import Budget from './Budget';
+// import Remaining from './Remaining'
+// import ExpenseTotal from './ExpenseTotal';
 import ExpenseList from './ExpenseList';
 import AddExpenseForm from './AddExpenseForm';
 import './statusBudget.css'
@@ -20,7 +20,7 @@ const AddComponent = () => {
       <div className="btn-modal">Add an expense</div>
       </div>
       <div className="row mt-3">
-        <div className="col-sm">
+        {/* <div className="col-sm">
           <Budget />
         </div>
         <div className="col-sm">
@@ -28,7 +28,7 @@ const AddComponent = () => {
         </div>
         <div className="col-sm">
           <ExpenseTotal />
-        </div>
+        </div> */}
       </div>
       <h3 className="mt-3">Expenses</h3>
       <div className="row mt-3">

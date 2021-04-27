@@ -3,6 +3,8 @@ import AddComponent from './add-component/AddComponent'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Charts from './charts-components/charts';
 import Chart2 from './charts-components/chart2';
+import Budget from './add-component/Budget';
+import ExpenseTotal from './add-component/ExpenseTotal';
 import "./dashboard.css"; 
 import { AppProvider } from '../../context/AppContext';
 import { ThemeProvider } from "styled-components";
@@ -29,7 +31,9 @@ export default function Dashboard({
         originCurrencyCode={originCurrencyCode}
         destinationCurrencyCode={destinationCurrencyCode}
 >   
-       {/* <Box/> */}
+       <Box/>
+       <Budget />
+       <ExpenseTotal />
        <ChartBox/>
 
        {/* the code from Box and ChartBox needs double-checking 
