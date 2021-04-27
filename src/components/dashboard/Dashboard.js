@@ -29,16 +29,8 @@ export default function Dashboard({
         originCurrencyCode={originCurrencyCode}
         destinationCurrencyCode={destinationCurrencyCode}
 >   
-<<<<<<< HEAD
-       {/* <Box/>
-        <ChartBox/> */}
-
-    <AddComponent />
-    <Charts />
-    <Chart2 />
-=======
-       <Box/>
-       <ChartBox/>
+        <Box/>
+       <ChartBox/> 
 
        {/* the code from Box and ChartBox needs double-checking 
        because it's collapsing everytime we add an expense, 
@@ -46,11 +38,10 @@ export default function Dashboard({
        accordinigly,
        */}
 
-    {/* <AddComponent />
+      <AddComponent />
     <Charts />
-    <Chart2 />  */}
+    <Chart2 />   
 
->>>>>>> ae6e67311e03f32bd87c03297a760e3ed998f27d
            <div className="theCharts">
          {/* <Charts 
            inputBudget={inputBudget} 

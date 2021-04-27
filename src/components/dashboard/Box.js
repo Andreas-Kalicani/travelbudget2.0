@@ -3,7 +3,7 @@ import { AppContext } from "../../context/AppContext";
 
 
 const Box = () => {
-const {budget, expenses, totalExpenses} = useContext(AppContext)
+const {budget, expenses} = useContext(AppContext)
     return (
         
         <div className="big-container">
@@ -17,7 +17,7 @@ const {budget, expenses, totalExpenses} = useContext(AppContext)
           </div>  
           <div className="box container3">
           <h1>Spent</h1>
-          <h1>{totalExpenses}</h1>
+          <h1></h1>
           </div>  
           <div className="box container4">
           <h1>Daily</h1>
