@@ -1,10 +1,11 @@
 import { useState} from "react";
-import React from "react";
+import React, {useContext} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import countries from "../../data/datainput";
 import styled, {createGlobalStyle, css} from 'styled-components';
-import {tomorrowDay} from "../../helper/functions"
+import {tomorrowDay} from "../../helper/functions";
+import {FormContext} from "../../context/FormProvider"
 
 
 const GlobalStyle =createGlobalStyle`
@@ -74,7 +75,6 @@ const Container =styled.div`
         margin-top:20px;
   }
   
-  
     
 `;
 
@@ -139,33 +139,27 @@ export default function InputForm({
     setOriginCurrencyCode,
     setDestinationCurrencyCode,
     setDays,
-    days
+    days,
+    startDate,
+    setStartDate,
+    homeCountry,
+    setHomeCountry,
+    endDate,
+    setEndDate,
+    destinationCountry,
+    setDestinationCountry,
+    apiLoaded,
+    setApiLoaded,
+    error,
+    setError,
     }){
-
-
-    //States
-    const [startDate, setStartDate] = useState(new Date(Date.now()));
-    const [endDate, setEndDate] = useState(tomorrowDay());
-    const [homeCountry, setHomeCountry] = useState("")
-    const [destinationCountry, setDestinationCountry] = useState("")
-    const [apiLoaded, setApiLoaded]= useState(false)
-    const [error, setError] =useState(false)
-
-    // the total number of days of duration of the trip
-    setDays (Math.ceil((endDate - startDate.getTime())/(1000*60*60*24)))
     
+    const context = useContext(FormContext);
 
-    //Find the Currency Code of the country Choosen 
-
-    setOriginCurrencyCode (countries.find((country) => 
-        country.countryName===homeCountry) ? countries.find((country) => 
-        country.countryName===homeCountry).currencyCode  : "Error");
-
-    setDestinationCurrencyCode (countries.find((country) => 
-        country.countryName===destinationCountry
-        ) ? countries.find((country) => 
-        country.countryName === destinationCountry).currencyCode : "Error");
-
+    //Functions
+    getDaysAmount()
+    getOriginCurrency()
+    getDestinationCurrency()
 
     //handlers
 

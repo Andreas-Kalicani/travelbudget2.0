@@ -12,11 +12,6 @@ import Horizentalchart from "./charts-components/Horizentalchart";
 import "./dashboard.css"; 
 
 export default function Dashboard({
-    inputBudget,
-    conversionResult,
-    originCurrencyCode,
-    destinationCurrencyCode,
-    days
     }) {
 
       
@@ -26,10 +21,10 @@ export default function Dashboard({
     
         <AppProvider
         
-        inputBudget={inputBudget} 
+        /* inputBudget={inputBudget} 
         conversionResult={conversionResult}
         originCurrencyCode={originCurrencyCode}
-        destinationCurrencyCode={destinationCurrencyCode}
+        destinationCurrencyCode={destinationCurrencyCode} */
 > 
        <Box/>
        <ChartBox/>
