@@ -3,7 +3,7 @@ import { AppContext } from '../../../context/AppContext';
 import {v4 as uuid4 } from 'uuid';
 // material-ui imports below
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+/* import Button from '@material-ui/core/Button'; */
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
@@ -11,6 +11,7 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import styled, { css} from 'styled-components';
 
 // style components below
 const styles = (theme) => ({
@@ -24,7 +25,88 @@ const styles = (theme) => ({
       top: theme.spacing(1),
       color: theme.palette.grey[500],
     },
-  });
+  }); 
+  const sharedButtonStyles = css`
+    background-color:${props=>props.theme.colors.button};
+    font-size: .9rem;
+    width:35%;
+    height:auto;
+    color: ${props=>props.theme.colors.secondary};
+    text-transform:uppercase;
+    /* font-weight:bold; */
+    border:none;
+    border-radius: 5px;
+    margin-top:10px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color .3s ease;
+  
+    &:hover{
+        background-color:${props=>props.theme.colors.buttonHover};
+        cursor:pointer;
+    }
+  
+`
+
+  const Button = styled.button`
+  display:block;
+  ${sharedButtonStyles}
+  
+`
+
+const ModalButton = styled.button`
+  display:flex;
+  justify-content:center;
+  font-family:"Segoe UI";
+  font-weight:bold;
+  ${sharedButtonStyles}
+
+  
+`
+
+
+const Input = styled.input`
+    display:block;
+    width:100%;
+    padding:20px;
+    background-color: #eee;
+    height:40px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 0px 0 20px 0;
+    box-sizing: border-box;
+`
+const ButtonWrapper = styled.div`
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+ 
+
+
+`
+const ModalContent = styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  
+`
+const Select =styled.select`
+    display:block;
+    width:100%;
+    padding-left:20px;
+    background-color: #eee;
+    height:40px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 0px 0 20px 0;
+    box-sizing: border-box; 
+`;
+
+const Label =styled.label`
+    font-family:"Verdana";
+    font-size:0.9rem;
+    
+`;
 // Dialog title
 const DialogTitle = withStyles(styles)((props) => {
     const { children, classes, onClose, ...other } = props;
@@ -95,16 +177,16 @@ const AddExpenseForm = () => {
 
     return (
         <>
-        <Button variant="outlined" color="primary" onClick={handleClickOpen} className="btn-modal">
+        <Button onClick={handleClickOpen} className="btn-modal">
         Add an expense
-      </Button>
+        </Button>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Modal title
+          Create a expense
         </DialogTitle>
         <DialogContent dividers>
         <form onSubmit={onSubmit}>
-            <div className="content inside">
+            <ModalContent>
                 <div className="col-sm">
                     <label htmlFor="name">Name</label>
                     <input 
@@ -114,7 +196,7 @@ const AddExpenseForm = () => {
                         id="name"
                         value={name}
                         onChange={event=> setName(event.target.value)}
-                    ></input>
+                    />
                 </div>
                 <div className="col-sm">
                     <label htmlFor="cost">Cost</label>
@@ -125,7 +207,7 @@ const AddExpenseForm = () => {
                         id="cost"
                         value={cost}
                         onChange={event=> setCost(event.target.value)}
-                    ></input>
+                    />
                 </div>
                 <select 
                         className="form-control"
@@ -141,9 +223,49 @@ const AddExpenseForm = () => {
                         ))}
                  </select>
                 <div className="col-sm">
-                    <button type="submit" className="btn-modal" onClick={handleClose} autoFocus>Save</button>
+                    <Label for="cost">Category</Label>
+                    <Select 
+
+                        required="required" 
+                        type="text"  
+                        id="category"
+                        value="{category}"
+                        /* onChange={event=> setCost(event.target.value)} */
+                    >
+                      <option value ="" disabled hidden>Choose a category </option>
+                      <option key={1} value="Food">
+                              Food
+                      </option>
+                      <option key={2} value="Trasport">
+                              Trasport
+                      </option>
+                      <option key={2} value="Accomodation">
+                      Accomodation
+                      </option>
+                      <option key={2} value="Activities">
+                      Activities
+                      </option>
+                      <option key={2} value="Insurance">
+                      Insurance
+                      </option>
+                      <option key={2} value="Gifts">
+                      Gifts
+                      </option>
+                      <option key={2} value="Others">
+                      Others
+                      </option>
+
+                      {/* {countries.map(option => (
+                          <option key={option.countryCode} value={option.countryName}>
+                              {option.countryName}
+                          </option>
+                      ))} */}
+                    </Select>
                 </div>
-            </div>
+                <ButtonWrapper>
+                    <ModalButton type="submit" onClick={handleClose} autoFocus>Save</ModalButton>
+                </ButtonWrapper>
+            </ModalContent>
         </form>
         </DialogContent>
       </Dialog>

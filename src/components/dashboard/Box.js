@@ -4,6 +4,9 @@ import { AppContext } from "../../context/AppContext";
 
 const Box = () => {
 const {budget, expenses} = useContext(AppContext)
+const totalExpenses = expenses.reduce((total, item)=>{
+  return (total += item.cost);
+}, 0);
     return (
         
         <div className="big-container">
@@ -13,11 +16,11 @@ const {budget, expenses} = useContext(AppContext)
           </div>  
           <div className="box container2">
           <h1>Expense</h1>
-          <h1 className="box-text">{expenses}</h1>
+          <h1 className="box-text">{totalExpenses}</h1>
           </div>  
           <div className="box container3">
           <h1>Spent</h1>
-          <h1></h1>
+          <h1>100</h1>
           </div>  
           <div className="box container4">
           <h1>Daily</h1>

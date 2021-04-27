@@ -1,0 +1,16 @@
+.container-box{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    order: 1; 
+    width: 60%; 
+    margin:10% auto 10%; 
+}
+
+.card{
+    height: 200px; 
+    width: 400px; 
+    border: 2px solid grey; 
+    margin: 10px;
+}

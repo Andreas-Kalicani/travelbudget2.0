@@ -4,6 +4,7 @@ import InputForm from "./components/form/InputForm";
 import './components/form/InputForm.css'
 import Dashboard from './components/dashboard/Dashboard';
 import React, {useState} from "react";
+import Team from "./components/team/Team"; 
 
 
 function App() {
@@ -47,6 +48,13 @@ function App() {
             {...props} />
           }
         />
+        <Route
+        exact path="/team"
+        render={props =>
+        <Team/>
+        }
+        />
+
       </Switch> 
     </div>
     
