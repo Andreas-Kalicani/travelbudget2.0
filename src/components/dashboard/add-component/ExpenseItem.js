@@ -74,8 +74,16 @@ const DescriptionContainer = styled.div`
 `
 
 const ExpenseItem = (props) => {
-    const { dispatch, destinationCurrencyCode } = useContext(AppContext);
+    const { dispatch, destinationCurrencyCode, expenses } = useContext(AppContext);
 
+    const selecIcon = {
+        food: () => <RestaurantIcon />,
+        transport: () => <DriveEtaIcon />,
+        accomodation: () => <HotelIcon/>,
+        activities: () => <LocalPharmacyIcon />
+    }
+
+    // ['food', 'transport', 'accomodation', 'activities', 'insurance', 'gifts', 'gift', 'others']
     const handleDeleteExpense = ()=> {
         dispatch({
             type: 'DELETE_EXPENSE',
@@ -83,12 +91,16 @@ const ExpenseItem = (props) => {
         })
 
     }
-
+console.log(expenses)
 
 
     return (
         <ItemLi>
-            <HotelIcon/>
+            {/* {expenses.category  ==="food" && }
+            <HotelIcon/> */}
+            {
+            selecIcon[expenses[0].category]
+            }
             <DescriptionContainer>
                 {props.name}
             </DescriptionContainer>

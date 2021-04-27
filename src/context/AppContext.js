@@ -30,8 +30,7 @@ export const AppProvider = (props) => {
     destinationCurrencyCode,
     days} = props
 
-
-    const categories = ['food', 'entertainments', 'etc']
+    const categories = ['food', 'transport', 'accomodation', 'activities', 'insurance', 'gifts', 'gift', 'others']
     const initialState  = {
         budget: conversionResult,
         expenses: [],
