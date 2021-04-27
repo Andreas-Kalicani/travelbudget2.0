@@ -29,7 +29,7 @@ export default function Dashboard({
         originCurrencyCode={originCurrencyCode}
         destinationCurrencyCode={destinationCurrencyCode}
 >   
-       <Box/>
+       {/* <Box/> */}
        <ChartBox/>
 
        {/* the code from Box and ChartBox needs double-checking 
@@ -38,9 +38,9 @@ export default function Dashboard({
        accordinigly,
        */}
 
-    {/* <AddComponent />
+    <AddComponent />
     <Charts />
-    <Chart2 />  */}
+    <Chart2 /> 
 
            <div className="theCharts">
          {/* <Charts 
