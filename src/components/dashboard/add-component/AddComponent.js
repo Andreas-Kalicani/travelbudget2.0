@@ -14,10 +14,10 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 100%;
   min-height:100px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 3%; 
   margin-top: 1rem!important;
-  box-shadow:${props=>props.theme.boxShadow}; 
+  box-shadow:${props=>props.theme.boxShadow};
+  border: 1px solid #ddd; 
  
   @media (min-width: 576px){
     max-width: 540px;

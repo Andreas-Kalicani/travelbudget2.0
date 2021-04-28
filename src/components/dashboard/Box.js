@@ -7,12 +7,15 @@ const BoxWrapper = styled.div`
   display: flex;
   flex-direction:row;
   justify-content: space-around;
-  margin-top: 5%; 
+  margin: 5%; 
+  width:100%;
     
 `
+
 const BoxDisplayer = styled.div`
-  width: 30% !important;
-  height: auto; 
+  width:22%;
+  height: auto;
+  padding:20px; 
   margin:20px;
   border: 2px solid grey; 
   box-shadow: ${props=>props.theme.boxShadow}; /* 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -25,31 +28,43 @@ const BoxDisplayer = styled.div`
   border-radius: 11px; 
     
 `
+const BoxTitle = styled.h3`
+  margin-bottom:20px;
+    
+`
+const Green= styled.h3`
+  color:#68B455;
+    
+`
 
-
+const Red= styled.h3`
+  color:${props=>props.theme.colors.red}; 
+    
+`
 const Box = () => {
 const {conversionResult, expenses,days} = useContext(AppContext)
 const totalExpenses = expenses.reduce((total, item)=>{
   return (total += item.cost);
 }, 0);
+let result=(Math.round((conversionResult-totalExpenses)*100)/100)
 
     return (
         
       <BoxWrapper>
           <BoxDisplayer>
-            <h3>Budget</h3>
-             <h3 className="box-text">{conversionResult}</h3>
+            <BoxTitle>Budget</BoxTitle>
+            <h3>{conversionResult}</h3>
           </BoxDisplayer>  
           <BoxDisplayer>
-            <h3>Expense</h3>
-            <h3 className="box-text">{totalExpenses}</h3>
+            <BoxTitle>Expense</BoxTitle>
+            <Red>{totalExpenses}</Red>
           </BoxDisplayer>  
           <BoxDisplayer>
-            <h3>Remaining</h3>
-            <h3>{(Math.round((conversionResult-totalExpenses)*100)/100)}</h3>
+            <BoxTitle>Remaining</BoxTitle>
+            {result >= 0 ? <Green>{result}</Green>: <Red>{result}</Red>}
           </BoxDisplayer>  
           <BoxDisplayer>
-            <h3> Budget for Daily Expenses</h3>
+            <BoxTitle> Budget for Daily Expenses</BoxTitle>
             <h3>{(Math.round((conversionResult/days)*100)/100)}</h3>
           </BoxDisplayer>  
       </BoxWrapper>  

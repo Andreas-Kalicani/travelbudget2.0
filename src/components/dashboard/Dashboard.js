@@ -14,10 +14,10 @@ import styled, {css} from 'styled-components';
 const BoxesContainer = styled.div`
 display:flex;
 flex-flow: row;
-justify-content:center;
-align-items:center;
+justify-content:space-around;
+align-items:flex-start;
 width:100%;
-margin-bottom:20px;
+margin-bottom:10px;
 height:auto;
 
 
@@ -36,7 +36,7 @@ export default function Dashboard({
       </BoxesContainer>
       <BoxesContainer>
         <AddComponent />
-       <ChartBox/>
+        <ChartBox/>
       </BoxesContainer>
        <Horizentalchart/>
        
