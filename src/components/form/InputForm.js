@@ -182,7 +182,15 @@ export default function InputForm({
         setDestinationCountry(e.target.value);  
         
     }
-   
+    const handleInputBudgetNameChange =(e)=>{
+        setBudgetName(e.target.value);  
+        
+    }
+    const handleInputPeople =(e)=>{
+        setNumberPeople(e.target.value);  
+        
+    }
+    
     
     const handleSubmit=(e)=>{
         e.preventDefault()
@@ -219,9 +227,8 @@ export default function InputForm({
                     name="inputBudget"
                     type='text'
                     placeholder= "Trip to Berlin"
-                    /* value={budgetName}
-                    onChange={handleInputBudgetNameChange} */
-                    /* required */
+                    value={context.budgetName}
+                    onChange={handleInputBudgetNameChange} 
                     />
                     <Label>Your Budget</Label>
                     <Input
@@ -230,7 +237,7 @@ export default function InputForm({
                     placeholder= "1000"
                     value={inputBudget}
                     onChange={handleInputBudgetChange}
-                    /* required */
+                    
                     />
                     
 
@@ -240,7 +247,7 @@ export default function InputForm({
                     value={homeCountry}  
                     name="countriesOrigin"
                     onChange={handleInputOrigin}
-                   /*  required */
+                   
                     >
                         <option value ="" disabled hidden>Choose your country </option>
                         {countries.map(option => (
@@ -257,7 +264,7 @@ export default function InputForm({
                     value={destinationCountry} 
                     name="countriesDestination"
                     onChange={handleInputDestiny}
-                   /*  required */
+                   
                     >
                         <option value ="" disabled hidden>Choose your country destination</option>
                         {countries.map(option => (
@@ -270,10 +277,10 @@ export default function InputForm({
                     <Label>Number of people</Label>
                     <Select 
                     placeholder= "1"
-                    /* value={destinationCountry}  */
+                    value={context.numberPeople}  
                     name="people"
-                    /* onChange={handleInputDestiny} */
-                    /* required */
+                    onChange={handleInputPeople} 
+                    
                     >
                         <option value ="" disabled hidden>people</option>
                         <option key={1} value={1}>1</option>
