@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Charts from './charts-components/charts';
 import Chart2 from './charts-components/chart2';
 import "./dashboard.css"; 
-import { AppProvider } from '../../context/AppContext';
 import { ThemeProvider } from "styled-components";
 import Box from "./Box";
 import ChartBox from "./ChartBox"; 
@@ -12,11 +11,6 @@ import Horizentalchart from "./charts-components/Horizentalchart";
 import "./dashboard.css"; 
 
 export default function Dashboard({
-    inputBudget,
-    conversionResult,
-    originCurrencyCode,
-    destinationCurrencyCode,
-    days
     }) {
 
       
@@ -24,13 +18,9 @@ export default function Dashboard({
   
      <div>
     
-        <AppProvider
+         
         
-        inputBudget={inputBudget} 
-        conversionResult={conversionResult}
-        originCurrencyCode={originCurrencyCode}
-        destinationCurrencyCode={destinationCurrencyCode}
-> 
+
        <Box/>
        <ChartBox/>
        <Horizentalchart/>
@@ -54,7 +44,7 @@ export default function Dashboard({
            days={days} /> */}
           {/* <Chart2/> */}
           </div>  
-      </AppProvider> 
+    
         </div>
         
         

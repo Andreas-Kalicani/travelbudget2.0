@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react';
+import { createContext, useReducer, useState } from 'react';
 
 const AppReducer = (state, action) => {
     switch(action.type){
@@ -24,13 +24,20 @@ const AppReducer = (state, action) => {
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {
-   const {inputBudget,
-    conversionResult,
-    originCurrencyCode,
-    destinationCurrencyCode,
-    days} = props
+    
+    let [inputBudget, setBudget] = useState("") ;
+    let [conversionResult, setConversionResult] =useState("");
+    let [originCurrencyCode, setOriginCurrencyCode] =useState("");
+    let [destinationCurrencyCode, setDestinationCurrencyCode] =useState("");
+    let [days, setDays] =useState("");
+    let [homeCountry, setHomeCountry] = useState("");
+    let [destinationCountry, setDestinationCountry] = useState("");
+    let [apiLoaded, setApiLoaded]= useState(false);
+    let [error, setError] =useState(false);
+    let [budgetName, setBudgetName]=useState("");
+    let [numberPeople, setNumberPeople]=useState("");
 
-    const categories = ['food', 'transport', 'accomodation', 'activities', 'insurance', 'gifts', 'gift', 'others']
+    const categories = ['food', 'transport', 'accomodation', 'activities', 'insurance', 'gifts', 'others']
     const initialState  = {
         budget: conversionResult,
         expenses: [],
@@ -45,6 +52,29 @@ export const AppProvider = (props) => {
             destinationCurrencyCode: state.destinationCurrencyCode,
             categories: categories,
             dispatch,
+            inputBudget:inputBudget,
+            setBudget:setBudget,
+            conversionResult:conversionResult,
+            setConversionResult:setConversionResult,
+            destinationCurrencyCode:destinationCurrencyCode,
+            originCurrencyCode:originCurrencyCode,
+            setOriginCurrencyCode:setOriginCurrencyCode,
+            setDestinationCurrencyCode:setDestinationCurrencyCode,
+            days:days,
+            setDays:setDays,
+            homeCountry:homeCountry,
+            setHomeCountry:setHomeCountry,
+            destinationCountry:destinationCountry,
+            setDestinationCountry:setDestinationCountry,
+            apiLoaded:apiLoaded,
+            setApiLoaded:setApiLoaded,
+            error: error,
+            setError:setError,
+            budgetName: budgetName,
+            setBudgetName: setBudgetName,
+            numberPeople: numberPeople,
+            setNumberPeople:setNumberPeople,
+            
         }}
     >
         {props.children}
