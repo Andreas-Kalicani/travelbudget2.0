@@ -2,7 +2,7 @@
 .chartContainer{
     display: flex; 
     justify-content: flex-end; 
-    margin: 20% 1% 40%;  
+    margin: 1%;  
 }
 .chart{
     width: 300px; 

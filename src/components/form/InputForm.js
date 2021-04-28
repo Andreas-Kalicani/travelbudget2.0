@@ -32,6 +32,7 @@ align-items:center;
 height:70vh;
 /* padding:0 20px; */
 margin-top: 10px;
+margin-bottom: 30px;
 /* margin-bottom:20%; */
 @media (max-height: 1060px) {
     height: 90vh;
@@ -48,6 +49,7 @@ const Form = styled.form`
 width:100%;
 max-width:700px;
 padding:40px;
+margin-bottom: 30px;
 color:${props=>props.theme.colors.primary}; 
 background-color:#fff;
 border-radius:10px;
