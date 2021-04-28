@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import Theme from "./data/theme";
-import FormProvider from "./context/FormProvider"
+import { AppProvider } from '../src/context/AppContext';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <FormProvider>
+    <AppProvider>
       <Theme>
         <App /> 
       </Theme>
-    </FormProvider>
+    </AppProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

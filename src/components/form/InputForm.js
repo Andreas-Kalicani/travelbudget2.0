@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import countries from "../../data/datainput";
 import styled, {createGlobalStyle, css} from 'styled-components';
 import {tomorrowDay} from "../../helper/functions";
-import {FormContext} from "../../context/FormProvider"
+import {AppContext} from "../../context/AppContext"
 
 
 
@@ -135,7 +135,7 @@ export default function InputForm(){
     let [startDate, setStartDate] = useState(new Date(Date.now()));
     let [endDate, setEndDate] = useState(tomorrowDay());
     
-    const context = useContext(FormContext);
+    const context = useContext(AppContext);
 
     //Functions
     /* getDaysAmount()
@@ -178,12 +178,12 @@ export default function InputForm(){
         context.setDestinationCountry(e.target.value);  
         
     }
-    const handleInputBudgetNameChange =(e)=>{
-        setBudgetName(e.target.value);  
+    const handleInputBudgetName =(e)=>{
+        context.setBudgetName(e.target.value);  
         
     }
     const handleInputPeople =(e)=>{
-        setNumberPeople(e.target.value);  
+        context.setNumberPeople(e.target.value);  
         
     }
     
@@ -226,7 +226,7 @@ export default function InputForm(){
                     type='text'
                     placeholder= "Trip to Berlin"
                     value={context.budgetName}
-                    onChange={handleInputBudgetNameChange} 
+                    onChange={handleInputBudgetName} 
                     />
                     <Label>Your Budget</Label>
                     <Input
@@ -237,7 +237,6 @@ export default function InputForm(){
                     onChange={handleInputBudgetChange}
                     
                     />
-                    
 
                     <Label>Select your Origin country</Label>
                     <Select 
@@ -275,12 +274,12 @@ export default function InputForm(){
                     <Label>Number of people</Label>
                     <Select 
                     placeholder= "1"
+                    type="number"
                     value={context.numberPeople}  
-                    name="people"
                     onChange={handleInputPeople} 
                     
                     >
-                        <option value ="" disabled hidden>people</option>
+                        <option value ="" disabled hidden>Choose a number</option>
                         <option key={1} value={1}>1</option>
                         <option key={2} value={2}>2</option>
                         <option key={3} value={3}>3</option>
