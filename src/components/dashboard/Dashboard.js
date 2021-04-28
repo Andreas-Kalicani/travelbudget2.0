@@ -24,7 +24,8 @@ export default function Dashboard({
         /* inputBudget={inputBudget} 
         conversionResult={conversionResult}
         originCurrencyCode={originCurrencyCode}
-        destinationCurrencyCode={destinationCurrencyCode} */
+        destinationCurrencyCode={destinationCurrencyCode} */ 
+        
 > 
        <Box/>
        <ChartBox/>

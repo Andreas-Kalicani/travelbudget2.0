@@ -5,7 +5,7 @@ import './components/form/InputForm.css'
 import Dashboard from './components/dashboard/Dashboard';
 import React, {useState} from "react";
 import Team from "./components/team/Team"; 
-import FormProvider from "./context/FormProvider"
+
 
 
 function App() {
@@ -14,9 +14,10 @@ function App() {
 
   return (
     <div>
+      
       <Navbar />
       <Switch>
-        <FormProvider>
+        
         <Route
           exact path="/" 
           render={props =>
@@ -39,9 +40,10 @@ function App() {
         <Team/>
         }
         />
-        </FormProvider>
+        
 
       </Switch> 
+      
     </div>
     
   );
