@@ -5,10 +5,11 @@ import "./chart2.css"
 
 
 const Charts = () =>{
-      const { budget, inputBudget, expenses } = useContext(AppContext);  // do we need InputBudget ?
+      const {/*  budget, inputBudget,  */conversionResult, expenses } = useContext(AppContext);  // do we need InputBudget ?
       const totalExpenses = expenses.reduce((total, item)=>{
         return (total += item.cost);
     }, 0);
+    let result= conversionResult-totalExpenses
     return (
     // <div>
     //   {/* This is to visually see changes dynamically, lets delete when we are sure it works */}
@@ -19,7 +20,7 @@ const Charts = () =>{
        
         datasets: [
             {
-                data: [budget, totalExpenses],
+                data: [result, totalExpenses],
                 label: "first dataset", 
                 backgroundColor: ['rgb(54, 162, 235)',  'rgb(255, 99, 132)'],
                

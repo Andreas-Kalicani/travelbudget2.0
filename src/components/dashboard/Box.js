@@ -21,7 +21,7 @@ const totalExpenses = expenses.reduce((total, item)=>{
           </div>  
           <div className="box container3">
           <h1>Remaining</h1>
-          <h1>{conversionResult-totalExpenses}</h1>
+          <h1>{(Math.round((conversionResult-totalExpenses)*100)/100)}</h1>
           </div>  
           <div className="box container4">
           <h1> Budget for Daily Expenses</h1>
