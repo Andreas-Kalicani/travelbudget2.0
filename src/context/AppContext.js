@@ -26,7 +26,7 @@ export const AppContext = createContext();
 export const AppProvider = (props) => {
     
     let [inputBudget, setBudget] = useState("") ;
-    let [conversionResult, setConversionResult] =useState(0);
+    let [conversionResult, setConversionResult] =useState("");
     let [originCurrencyCode, setOriginCurrencyCode] =useState("");
     let [destinationCurrencyCode, setDestinationCurrencyCode] =useState("");
     let [days, setDays] =useState("");
@@ -37,7 +37,7 @@ export const AppProvider = (props) => {
     let [budgetName, setBudgetName]=useState("");
     let [numberPeople, setNumberPeople]=useState("");
 
-    const categories = ['food', 'transport', 'accomodation', 'activities', 'insurance', 'gifts', 'gift', 'others']
+    const categories = ['food', 'transport', 'accomodation', 'activities', 'insurance', 'gifts', 'others']
     const initialState  = {
         budget: conversionResult,
         expenses: [],

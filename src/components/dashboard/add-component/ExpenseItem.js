@@ -8,6 +8,7 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import LocalPharmacyIcon from '@material-ui/icons/LocalPharmacy';
 import LocalActivityIcon from '@material-ui/icons/LocalActivity';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 
 const ExpenseItemAmount = styled.span`
     /* display: inline-block;
@@ -80,7 +81,10 @@ const ExpenseItem = (props) => {
         food: () => <RestaurantIcon />,
         transport: () => <DriveEtaIcon />,
         accomodation: () => <HotelIcon/>,
-        activities: () => <LocalPharmacyIcon />
+        activities: () => <LocalActivityIcon />,
+        insurance:()=><LocalPharmacyIcon/>,
+        gifts:()=> <CardGiftcardIcon/>,
+        others:()=> <AttachMoneyIcon/>
     }
 
     const handleDeleteExpense = ()=> {
