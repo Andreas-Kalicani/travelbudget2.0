@@ -91,15 +91,15 @@ const ModalContent = styled.div`
   
 `
 const Select =styled.select`
-    display:block;
-    width:100%;
-    padding-left:20px;
-    background-color: #eee;
-    height:40px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin: 0px 0 20px 0;
-    box-sizing: border-box; 
+  display: block;
+  width: 85%;
+  padding-left: 10px;
+  background-color: #eee;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 10px 0px 20px 20px;
+  box-sizing: border-box;
 `;
 
 const Label =styled.label`
@@ -188,8 +188,8 @@ const AddExpenseForm = () => {
         <form onSubmit={onSubmit}>
             <ModalContent>
                 <div className="col-sm">
-                    <label htmlFor="name">Name</label>
-                    <input 
+                    <Label htmlFor="name">Name</Label>
+                    <Input 
                         required='required' 
                         type="text" 
                         className="form-control" 
@@ -199,8 +199,8 @@ const AddExpenseForm = () => {
                     />
                 </div>
                 <div className="col-sm">
-                    <label htmlFor="cost">Cost</label>
-                    <input 
+                    <Label htmlFor="cost">Cost</Label>
+                    <Input 
                         required="required" 
                         type="text" 
                         className="form-control" 
@@ -209,59 +209,26 @@ const AddExpenseForm = () => {
                         onChange={event=> setCost(event.target.value)}
                     />
                 </div>
-                <select 
-                        className="form-control"
+                <Label for="cost">Category</Label>
+                <Select 
+                        required="required" 
+                        type="text"
+                        id="category" 
+                        // value="{category}"
+                        
                         name={category}
                         onChange={event=> setCategory(event.target.value)}
                     >
-                        <option value="">-- Selecciona Categoría --</option>
-                        {categories.map(category => (
+                        <option value="">-Selecciona Categoría-</option>
+                        {categories.map((category, index) => (
                             <option 
-                                key={category} 
+                                key={index} 
                                 value={category} 
                             >{category}</option>
                         ))}
-                 </select>
-                <div className="col-sm">
-                    <Label for="cost">Category</Label>
-                    <Select 
+                 </Select>
 
-                        required="required" 
-                        type="text"  
-                        id="category"
-                        value="{category}"
-                        /* onChange={event=> setCost(event.target.value)} */
-                    >
-                      <option value ="" disabled hidden>Choose a category </option>
-                      <option key={1} value="Food">
-                              Food
-                      </option>
-                      <option key={2} value="Trasport">
-                              Trasport
-                      </option>
-                      <option key={2} value="Accomodation">
-                      Accomodation
-                      </option>
-                      <option key={2} value="Activities">
-                      Activities
-                      </option>
-                      <option key={2} value="Insurance">
-                      Insurance
-                      </option>
-                      <option key={2} value="Gifts">
-                      Gifts
-                      </option>
-                      <option key={2} value="Others">
-                      Others
-                      </option>
-
-                      {/* {countries.map(option => (
-                          <option key={option.countryCode} value={option.countryName}>
-                              {option.countryName}
-                          </option>
-                      ))} */}
-                    </Select>
-                </div>
+               
                 <ButtonWrapper>
                     <ModalButton type="submit" onClick={handleClose} autoFocus>Save</ModalButton>
                 </ButtonWrapper>
