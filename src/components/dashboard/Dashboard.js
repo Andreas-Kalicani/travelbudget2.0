@@ -41,9 +41,9 @@ export default function Dashboard({
        accordinigly,
        */}
 
-     {/*<AddComponent />
-    <Charts />
-     <Chart2 />  */}
+    <AddComponent />
+    {/* <Charts />
+    <Chart2 />   */}
 
            <div className="theCharts">
          {/* <Charts 
