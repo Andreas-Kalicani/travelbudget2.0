@@ -29,6 +29,7 @@ const StyledChartBox = styled.div`
 const HeaderChart = styled.h3`
 width: 100%; 
 padding:10px;
+background-color: #eee;
 border: 2px solid grey; 
 text-align: center; 
 border-radius: 10px; 

@@ -15,9 +15,9 @@ const BoxWrapper = styled.div`
 const BoxDisplayer = styled.div`
   width:22%;
   height: auto;
-  padding:20px; 
+  padding-bottom:20px; 
   margin:20px;
-  border: 2px solid grey; 
+  
   box-shadow: ${props=>props.theme.boxShadow}; /* 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
   0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -30,6 +30,8 @@ const BoxDisplayer = styled.div`
 `
 const BoxTitle = styled.h3`
   margin-bottom:20px;
+  background-color: #eee;
+  padding:20px;
     
 `
 const Green= styled.h3`
@@ -42,7 +44,7 @@ const Red= styled.h3`
     
 `
 const Box = () => {
-const {conversionResult, expenses,days} = useContext(AppContext)
+const {conversionResult, expenses,days, destinationCurrencyCode} = useContext(AppContext)
 const totalExpenses = expenses.reduce((total, item)=>{
   return (total += item.cost);
 }, 0);
@@ -53,19 +55,19 @@ let result=(Math.round((conversionResult-totalExpenses)*100)/100)
       <BoxWrapper>
           <BoxDisplayer>
             <BoxTitle>Budget</BoxTitle>
-            <h3>{conversionResult}</h3>
+            <h3>{conversionResult} {destinationCurrencyCode}</h3>
           </BoxDisplayer>  
           <BoxDisplayer>
             <BoxTitle>Expense</BoxTitle>
-            <Red>{totalExpenses}</Red>
+            <Red>{totalExpenses} {destinationCurrencyCode} </Red>
           </BoxDisplayer>  
           <BoxDisplayer>
             <BoxTitle>Remaining</BoxTitle>
-            {result >= 0 ? <Green>{result}</Green>: <Red>{result}</Red>}
+            {result >= 0 ? <Green>{result} {destinationCurrencyCode}</Green>: <Red>{result} {destinationCurrencyCode}</Red>}
           </BoxDisplayer>  
           <BoxDisplayer>
-            <BoxTitle> Budget for Daily Expenses</BoxTitle>
-            <h3>{(Math.round((conversionResult/days)*100)/100)}</h3>
+            <BoxTitle> Daily Budget</BoxTitle>
+            <h3>{(Math.round((conversionResult/days)*100)/100)} {destinationCurrencyCode}</h3>
           </BoxDisplayer>  
       </BoxWrapper>  
     ); 

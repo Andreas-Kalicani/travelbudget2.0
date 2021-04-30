@@ -3,14 +3,15 @@ import {Switch, Route} from "react-router-dom"
 import InputForm from "./components/form/InputForm";
 import './components/form/InputForm.css'
 import Dashboard from './components/dashboard/Dashboard';
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import Team from "./components/team/Team"; 
+import { AppContext } from "./context/AppContext";
 
 
 
 function App() {
 
-  
+  const {apiLoaded} = useContext(AppContext)
 
   return (
     <div>
@@ -26,14 +27,15 @@ function App() {
             {...props} />
           }
         />
-        <Route
+        {apiLoaded && <Route
           exact path="/dashboard"
           render={props =>
             <Dashboard 
             
             {...props} />
           }
-        />
+        />}
+        
         <Route
         exact path="/team"
         render={props =>

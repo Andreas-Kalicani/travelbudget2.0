@@ -7,6 +7,9 @@ import styled, {createGlobalStyle, css} from 'styled-components';
 import {tomorrowDay} from "../../helper/functions";
 import {AppContext} from "../../context/AppContext"
 
+import { useHistory } from "react-router-dom";
+
+
 
 
 const GlobalStyle =createGlobalStyle`
@@ -139,11 +142,11 @@ export default function InputForm(){
     
     const context = useContext(AppContext);
 
-    //Functions
-    /* getDaysAmount()
-    getOriginCurrency()
-    getDestinationCurrency() */
+    
+    //Redirection
+    const history = useHistory(); 
 
+   
 
     // the total number of days of duration of the trip
     
@@ -198,8 +201,8 @@ export default function InputForm(){
         }
         context.setError(false)
         console.log(startDate)
-        
         console.log(context.days)
+        history.push('/dashboard');
        
         fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${context.originCurrencyCode}/${context.destinationCurrencyCode}/${context.inputBudget}`,{
             mode:'cors'
@@ -323,10 +326,10 @@ export default function InputForm(){
                 </Form>
                
                 <div>
-                {
+                {/* {
                     context.apiLoaded &&
                 <h1>Data Return: {isNaN(context.conversionResult) ? "Introduce un valor" : context.conversionResult } {context.destinationCurrencyCode} </h1>
-                }
+                } */}
             
                 </div>
 
