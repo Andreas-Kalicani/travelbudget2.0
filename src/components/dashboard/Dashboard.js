@@ -9,6 +9,19 @@ import Box from "./Box";
 import ChartBox from "./ChartBox"; 
 import Horizentalchart from "./charts-components/Horizentalchart"; 
 import "./dashboard.css"; 
+import styled, {css} from 'styled-components';
+
+const BoxesContainer = styled.div`
+display:flex;
+flex-flow: row;
+justify-content:space-around;
+align-items:flex-start;
+width:100%;
+margin-bottom:10px;
+height:auto;
+
+
+`
 
 export default function Dashboard({
     }) {
@@ -16,13 +29,15 @@ export default function Dashboard({
       
     return (
   
-     <div>
-    
-         
-        
+     <>
+      <BoxesContainer>
 
        <Box/>
-       <ChartBox/>
+      </BoxesContainer>
+      <BoxesContainer>
+        <AddComponent />
+        <ChartBox/>
+      </BoxesContainer>
        <Horizentalchart/>
        
        {/* the code from Box and ChartBox needs double-checking 
@@ -31,21 +46,7 @@ export default function Dashboard({
        accordinigly,
        */}
 
-    <AddComponent />
-    {/* <Charts />
-    <Chart2 />   */}
-
-           <div className="theCharts">
-         {/* <Charts 
-           inputBudget={inputBudget} 
-           conversionResult={conversionResult}
-           originCurrencyCode={originCurrencyCode}
-           destinationCurrencyCode={destinationCurrencyCode}
-           days={days} /> */}
-          {/* <Chart2/> */}
-          </div>  
-    
-        </div>
+      </>
         
         
     )

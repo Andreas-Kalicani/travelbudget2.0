@@ -14,11 +14,10 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 100%;
   min-height:100px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 3%; 
   margin-top: 1rem!important;
-  /* padding:30px; */
-  box-shadow:${props=>props.theme.boxShadow}; 
+  box-shadow:${props=>props.theme.boxShadow};
+  border: 1px solid #ddd; 
  
   @media (min-width: 576px){
     max-width: 540px;
@@ -68,33 +67,17 @@ const AddComponent = () => {
 
     <Container>
       <H2>Expenses</H2>
-      {/* <div className="travel-avatar"></div>
-      <h2>Your Balance</h2>
-      <div className="btn-modal">Add an expense</div>
-      </div> */}
-      {/* <div className="row mt-3">
-        <div className="col-sm">
-          <Budget />
-        </div>
-        <div className="col-sm">
-          <Remaining />
-        </div>
-        <div className="col-sm">
-          <ExpenseTotal />
-        </div>
-      </div> */}
-      {/* <h3 className="mt-3">Expenses</h3> */}
+    
       <ExpensesListContainer>
         <div className="col-sm">
           <ExpenseList />
         </div>
       </ExpensesListContainer> 
-      {/* <h3 className="mt-3">Add Expense</h3>
-      <div className="mt-3"> */}
+     
         <ButtonWrapper>
           <AddExpenseForm />
         </ButtonWrapper>
-      {/* </div> */}
+      
     </Container>
       
 
