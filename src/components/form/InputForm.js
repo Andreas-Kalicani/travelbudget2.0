@@ -1,10 +1,10 @@
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import React, {useContext} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import countries from "../../data/datainput";
+/* import countries from "../../data/datainput"; */
 import styled, {createGlobalStyle, css} from 'styled-components';
-import {tomorrowDay} from "../../helper/functions";
+import {tomorrowDay, getCountriesList } from "../../helper/functions";
 import {AppContext} from "../../context/AppContext"
 
 import { useHistory } from "react-router-dom";
@@ -135,17 +135,29 @@ margin-bottom: 2rem;
 `;
 
 
+
+
 export default function InputForm(){
 
     let [startDate, setStartDate] = useState(new Date(Date.now()));
     let [endDate, setEndDate] = useState(tomorrowDay());
+    let [countries, setDataCountries]=useState([])
     
     const context = useContext(AppContext);
+   
 
     
-    //Redirection
+    // to Redirect to Dashboard
     const history = useHistory(); 
 
+    //get countries data from database
+    
+    useEffect(() => {
+        getCountriesList().then((data)=>setDataCountries(data))
+            
+    },[])
+    console.log(countries)
+ 
    
 
     // the total number of days of duration of the trip
@@ -164,7 +176,7 @@ export default function InputForm(){
     context.setDestinationCurrencyCode (countries.find((country) => 
         country.countryName===context.destinationCountry
         ) ? countries.find((country) => 
-        country.countryName === context.destinationCountry).currencyCode : "Error");
+        country.countryName === context.destinationCountry).currencyCode : "Error"); 
     
 
 
