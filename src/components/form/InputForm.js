@@ -1,10 +1,12 @@
 import { useState} from "react";
-import React from "react";
+import React, {useContext} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import countries from "../../data/datainput";
 import styled, {createGlobalStyle, css} from 'styled-components';
-import {tomorrowDay} from "../../helper/functions"
+import {tomorrowDay} from "../../helper/functions";
+import {AppContext} from "../../context/AppContext"
+
 
 
 const GlobalStyle =createGlobalStyle`
@@ -74,7 +76,6 @@ const Container =styled.div`
         margin-top:20px;
   }
   
-  
     
 `;
 
@@ -129,77 +130,82 @@ margin-bottom: 2rem;
 `;
 
 
-export default function InputForm({
-    inputBudget,
-    setBudget,
-    conversionResult,
-    setConversionResult,
-    originCurrencyCode,
-    destinationCurrencyCode,
-    setOriginCurrencyCode,
-    setDestinationCurrencyCode,
-    setDays,
-    days
-    }){
+export default function InputForm(){
 
+    let [startDate, setStartDate] = useState(new Date(Date.now()));
+    let [endDate, setEndDate] = useState(tomorrowDay());
+    
+    const context = useContext(AppContext);
 
-    //States
-    const [startDate, setStartDate] = useState(new Date(Date.now()));
-    const [endDate, setEndDate] = useState(tomorrowDay());
-    const [homeCountry, setHomeCountry] = useState("")
-    const [destinationCountry, setDestinationCountry] = useState("")
-    const [apiLoaded, setApiLoaded]= useState(false)
-    const [error, setError] =useState(false)
+    //Functions
+    /* getDaysAmount()
+    getOriginCurrency()
+    getDestinationCurrency() */
+
 
     // the total number of days of duration of the trip
-    setDays (Math.ceil((endDate - startDate.getTime())/(1000*60*60*24)))
+    
+
+    context.setDays (Math.ceil((endDate- startDate.getTime())/(1000*60*60*24)))
     
 
     //Find the Currency Code of the country Choosen 
+    context.setOriginCurrencyCode (countries.find((country) => 
+        country.countryName===context.homeCountry) ? countries.find((country) => 
+        country.countryName===context.homeCountry).currencyCode  : "Error");
+    
 
-    setOriginCurrencyCode (countries.find((country) => 
-        country.countryName===homeCountry) ? countries.find((country) => 
-        country.countryName===homeCountry).currencyCode  : "Error");
-
-    setDestinationCurrencyCode (countries.find((country) => 
-        country.countryName===destinationCountry
+    
+    context.setDestinationCurrencyCode (countries.find((country) => 
+        country.countryName===context.destinationCountry
         ) ? countries.find((country) => 
-        country.countryName === destinationCountry).currencyCode : "Error");
+        country.countryName === context.destinationCountry).currencyCode : "Error");
+    
 
 
     //handlers
 
     const handleInputBudgetChange =(e)=>{
-        setBudget(e.target.value);
+        context.setBudget(e.target.value);
         
     }
     const handleInputOrigin =(e)=>{
-        setHomeCountry(e.target.value);  
+        context.setHomeCountry(e.target.value);  
         
     }
 
     const handleInputDestiny =(e)=>{
-        setDestinationCountry(e.target.value);  
+        context.setDestinationCountry(e.target.value);  
         
     }
-   
+    const handleInputBudgetName =(e)=>{
+        context.setBudgetName(e.target.value);  
+        
+    }
+    const handleInputPeople =(e)=>{
+        context.setNumberPeople(e.target.value);  
+        
+    }
+    
     
     const handleSubmit=(e)=>{
         e.preventDefault()
-        if(inputBudget.trim()===""|| homeCountry.trim()===""|| destinationCountry.trim()===""){
-            setError(true);
+        if(context.inputBudget.trim()===""|| context.homeCountry.trim()===""|| context.destinationCountry.trim()===""){
+            context.setError(true);
             return;
         }
-        setError(false)
+        context.setError(false)
+        console.log(startDate)
         
+        console.log(context.days)
        
-        fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${originCurrencyCode}/${destinationCurrencyCode}/${inputBudget}`,{
+        fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${context.originCurrencyCode}/${context.destinationCurrencyCode}/${context.inputBudget}`,{
             mode:'cors'
         })
             .then(response=> response.json())
             .then((data)=>{ 
-            setConversionResult(Math.round(data.conversion_result * 100) / 100);
-            setApiLoaded(true)
+                context.setConversionResult(Math.round(data.conversion_result * 100) / 100);
+                context.setApiLoaded(true)
             })
             
     } 
@@ -210,7 +216,7 @@ export default function InputForm({
             <FormWrapper>
                 
                 <Form className="InputForm-form" onSubmit={handleSubmit}>
-                {error? <Error>All fields are required</Error> : null }
+                {context.error? <Error>All fields are required</Error> : null }
                     <H2>Create your budget</H2>
                     <hr/>
 
@@ -219,28 +225,26 @@ export default function InputForm({
                     name="inputBudget"
                     type='text'
                     placeholder= "Trip to Berlin"
-                    /* value={budgetName}
-                    onChange={handleInputBudgetNameChange} */
-                    /* required */
+                    value={context.budgetName}
+                    onChange={handleInputBudgetName} 
                     />
                     <Label>Your Budget</Label>
                     <Input
                     name="inputBudget"
                     type='number'
                     placeholder= "1000"
-                    value={inputBudget}
+                    value={context.inputBudget}
                     onChange={handleInputBudgetChange}
-                    /* required */
-                    />
                     
+                    />
 
                     <Label>Select your Origin country</Label>
                     <Select 
                     placeholder= "Choose a country"
-                    value={homeCountry}  
+                    value={context.homeCountry}  
                     name="countriesOrigin"
                     onChange={handleInputOrigin}
-                   /*  required */
+                   
                     >
                         <option value ="" disabled hidden>Choose your country </option>
                         {countries.map(option => (
@@ -254,10 +258,10 @@ export default function InputForm({
                     <Label>Select your country destination</Label>
                     <Select 
                     placeholder= "Choose a country"
-                    value={destinationCountry} 
+                    value={context.destinationCountry} 
                     name="countriesDestination"
                     onChange={handleInputDestiny}
-                   /*  required */
+                   
                     >
                         <option value ="" disabled hidden>Choose your country destination</option>
                         {countries.map(option => (
@@ -270,12 +274,12 @@ export default function InputForm({
                     <Label>Number of people</Label>
                     <Select 
                     placeholder= "1"
-                    /* value={destinationCountry}  */
-                    name="people"
-                    /* onChange={handleInputDestiny} */
-                    /* required */
+                    type="number"
+                    value={context.numberPeople}  
+                    onChange={handleInputPeople} 
+                    
                     >
-                        <option value ="" disabled hidden>people</option>
+                        <option value ="" disabled hidden>Choose a number</option>
                         <option key={1} value={1}>1</option>
                         <option key={2} value={2}>2</option>
                         <option key={3} value={3}>3</option>
@@ -318,8 +322,8 @@ export default function InputForm({
                
                 <div>
                 {
-                    apiLoaded &&
-                <h1>Data Return: {isNaN(conversionResult) ? "Introduce un valor" : conversionResult } {destinationCurrencyCode} </h1>
+                    context.apiLoaded &&
+                <h1>Data Return: {isNaN(context.conversionResult) ? "Introduce un valor" : context.conversionResult } {context.destinationCurrencyCode} </h1>
                 }
             
                 </div>

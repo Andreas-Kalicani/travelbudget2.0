@@ -21,7 +21,7 @@ const Chart2 = (props) => {
              options={{responsive: true, maintainAspectRatio: false}} height={50} data={{
                 labels: ["expenses", "budget"], 
                 datasets:[{
-                    data: [categoryExpense.food, categoryExpense.entertainments, categoryExpense.etc],
+                    data: [categoryExpense.food, categoryExpense.transport, categoryExpense.accomodation, categoryExpense.activities, categoryExpense.insurance, categoryExpense.gifts, categoryExpense.others],
                     label: "first dataset", 
                     backgroundColor: ["red", "blue"]
                     

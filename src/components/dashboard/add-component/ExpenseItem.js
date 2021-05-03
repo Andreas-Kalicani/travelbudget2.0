@@ -8,6 +8,7 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import LocalPharmacyIcon from '@material-ui/icons/LocalPharmacy';
 import LocalActivityIcon from '@material-ui/icons/LocalActivity';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 
 const ExpenseItemAmount = styled.span`
     /* display: inline-block;
@@ -76,6 +77,16 @@ const DescriptionContainer = styled.div`
 const ExpenseItem = (props) => {
     const { dispatch, destinationCurrencyCode } = useContext(AppContext);
 
+    const selecIcon = {
+        food: () => <RestaurantIcon />,
+        transport: () => <DriveEtaIcon />,
+        accomodation: () => <HotelIcon/>,
+        activities: () => <LocalActivityIcon />,
+        insurance:()=><LocalPharmacyIcon/>,
+        gifts:()=> <CardGiftcardIcon/>,
+        others:()=> <AttachMoneyIcon/>
+    }
+
     const handleDeleteExpense = ()=> {
         dispatch({
             type: 'DELETE_EXPENSE',
@@ -84,11 +95,27 @@ const ExpenseItem = (props) => {
 
     }
 
-
-
+    
     return (
         <ItemLi>
-            <HotelIcon/>
+            {/* esto de abajo me hace un log de la categoria, que hereda de ExpenseList.js */}
+            {console.log(props.category)} 
+
+            {/* En este ejemplo se ve el icono pero siempre el de food */}
+            {/* {selecIcon.food()} */}
+
+
+            {/* {selecIcon.props.category} 
+
+            esto me da error cannot read property 'category' of undefined
+            */}
+
+
+
+            {selecIcon[props.category]()} 
+            {/* No sale el icono */}
+           
+
             <DescriptionContainer>
                 {props.name}
             </DescriptionContainer>
