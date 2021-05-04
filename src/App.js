@@ -15,7 +15,7 @@ function App() {
   const [originCurrencyCode, setOriginCurrencyCode] =useState("");
   const [destinationCurrencyCode, setDestinationCurrencyCode] =useState("");
   const [days, setDays] =useState("");
-  const [budgetNameText, setsBudgetName] = useState('Trip to Berlin')
+  
   return (
     <div>
       <Navbar />
@@ -24,7 +24,7 @@ function App() {
           exact path="/" 
           render={props =>
             <InputForm 
-            budgetNameText={budgetNameText}
+            
             setsBudgetName={setsBudgetName}
             inputBudget={inputBudget} 
             setBudget={setBudget} 
