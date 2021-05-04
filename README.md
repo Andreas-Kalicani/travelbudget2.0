@@ -40,8 +40,8 @@ React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-
 
 Technologies | Images | link
 | :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
+React  | Content Cell | Content Cell
+CSS  | Content Cell | Content Cell
  
 
  
