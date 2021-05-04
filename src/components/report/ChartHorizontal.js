@@ -13,9 +13,34 @@ const HorizontalContainer = styled.div`
 
 `
 
+
+const StyledChartBox = styled.div`
+    width: 100%; 
+    height: auto; 
+    padding:10px;
+    padding-bottom:20px;
+    border: 2px solid grey; 
+    box-shadow: ${props=>props.theme.boxShadow};
+    margin:0% 5%; 
+    border-radius: 11px;
+
+`
+
+const HeaderChart = styled.h3`
+width: 100%; 
+padding:20px;
+background-color: #eee;
+border: 2px solid grey; 
+text-align: center; 
+border-radius: 10px; 
+
+`
+
 const ChartHorizontal = () =>{
     return (
         <HorizontalContainer>
+            <StyledChartBox>
+            <HeaderChart>Expenses by category</HeaderChart>
             <HorizontalBar 
             data = {{
                 labels: ["Entertainment", "Food", "Travels", "Others"],
@@ -28,6 +53,7 @@ const ChartHorizontal = () =>{
                 ]
             }}
             />
+            </StyledChartBox>
         </HorizontalContainer>
     )
 }
