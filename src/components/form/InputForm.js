@@ -5,8 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 /* import countries from "../../data/datainput"; */
 import styled, {createGlobalStyle, css} from 'styled-components';
 import {tomorrowDay, getCountriesList } from "../../helper/functions";
-import {AppContext} from "../../context/AppContext"
-
+import {AppContext} from "../../context/AppContext";
 import { useHistory } from "react-router-dom";
 
 
@@ -229,6 +228,7 @@ export default function InputForm(){
 
     return (
         <Container>
+            
             <GlobalStyle/>
             <FormWrapper>
                 

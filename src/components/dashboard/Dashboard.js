@@ -36,9 +36,9 @@ export default function Dashboard({
       </BoxesContainer>
       <BoxesContainer>
         <AddComponent />
-        <ChartBox/>
+        {/* <ChartBox/> */}
       </BoxesContainer>
-       <Horizentalchart/>
+      {/*  <Horizentalchart/> */}
        
        {/* the code from Box and ChartBox needs double-checking 
        because it's collapsing everytime we add an expense, 

@@ -6,6 +6,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import React, {useContext} from "react";
 import Team from "./components/team/Team"; 
 import { AppContext } from "./context/AppContext";
+import Report from "./components/report/Report";
 
 
 
@@ -35,6 +36,25 @@ function App() {
             {...props} />
           }
         />}
+
+        {/* <Route
+          exact path="/reports"
+          render={props =>
+            <Report
+            
+            {...props} />
+          }
+        
+        />  */}
+
+      <Route
+        exact path="/reports"
+        render={props =>
+        <Report
+        {...props}/>
+        }
+        />
+        
         
         <Route
         exact path="/team"
