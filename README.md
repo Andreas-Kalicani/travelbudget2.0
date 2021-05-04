@@ -56,7 +56,28 @@ The first thing we need to do is to Clone the git repository
 
 ### Step 1
 
+The first thing we need to do is to Clone the git repository 
+
 <img width="1007" alt="Skjermbilde 2021-05-04 kl  17 06 22" src="https://user-images.githubusercontent.com/53916979/117025297-14c29f80-acfb-11eb-995e-5e65cbc7aee6.png">
+
+<img width="1080" alt="Skjermbilde 2021-05-04 kl  17 10 13" src="https://user-images.githubusercontent.com/53916979/117025964-a6caa800-acfb-11eb-951f-86646655384e.png">
+
+### step 2
+
+To change to the correct directory
+
+<img width="820" alt="Skjermbilde 2021-05-04 kl  17 12 13" src="https://user-images.githubusercontent.com/53916979/117026234-e85b5300-acfb-11eb-98ef-83d6f5f73ad0.png">
+
+### step 3
+
+Do an NPM install 
+
+$ npm install 
+and then you do and npm start
+
+$npm start 
+
+Then you are ready to go 🏁
 
 
  
