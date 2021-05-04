@@ -48,7 +48,7 @@ Material UI |<img src="https://material-ui.com/static/logo.png" width="50px" hei
 Chartjs |<img src="https://www.chartjs.org/img/chartjs-logo.svg" width="50px" height="50px"/> | https://www.npmjs.com/package/react-chartjs-2
 Nodejs |<img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png" height="50px" width="50px"/> | https://nodejs.org/en/
 MySQL | <img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" width="50px" height="50px"/> | https://www.mysql.com/
-ExhangeRate-api |<img src="https://www.exchangerate-api.com/img/logo-medium-invert-half-rc.png" width="50px" height="50px" />|https://www.exchangerate-api.com/
+ExhangeRate-api |<img src="https://www.exchangerate-api.com/img/logo-medium-invert-half-rc.png" width="70px" height="70px" />|https://www.exchangerate-api.com/
 
 
  
