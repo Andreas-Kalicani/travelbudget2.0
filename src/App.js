@@ -5,6 +5,7 @@ import './components/form/InputForm.css'
 import Dashboard from './components/dashboard/Dashboard';
 import React, {useState} from "react";
 import Team from "./components/team/Team"; 
+import { Card } from '@material-ui/core';
 
 
 function App() {
@@ -50,10 +51,16 @@ function App() {
             {...props} />
           }
         />
+        
         <Route
         exact path="/team"
         render={props =>
+        
+        
         <Team/>
+        
+        {...props} />
+      
         }
         />
 
