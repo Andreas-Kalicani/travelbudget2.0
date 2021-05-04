@@ -38,7 +38,7 @@ React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-
  The technologies and libraries we used for this project. 
  Will be listet down here 
 
-Left aligned Header | Right aligned Header | Center aligned Header
+Technologies | Images | link
 | :--- | ---: | :---:
 Content Cell  | Content Cell | Content Cell
 Content Cell  | Content Cell | Content Cell
