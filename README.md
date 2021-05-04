@@ -38,22 +38,10 @@ React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-
  The technologies and libraries we used for this project. 
  Will be listet down here 
 
- [heading-1](#heading-1 "Goto heading-1")
- 
-     var specificLanguage_code = 
-    {
-        "data": {
-            "lookedUpPlatform": 1,
-            "query": "Kasabian+Test+Transmission",
-            "lookedUpItem": {
-                "name": "Test Transmission",
-                "artist": "Kasabian",
-                "album": "Kasabian",
-                "picture": null,
-                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
-            }
-        }
-    }
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
  
 
  
