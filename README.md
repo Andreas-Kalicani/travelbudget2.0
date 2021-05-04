@@ -41,7 +41,8 @@ React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-
 Technologies | Images | link
 | :--- | ---: | :---:
 React  | <img src="https://doc.castsoftware.com/download/thumbnails/418185647/CAST_ReactJS_Application.jpg?version=1&modificationDate=1593447628930&api=v2" width="50px" height="50px"/> | https://reactjs.org/
-CSS  | <img src="https://fs.siteor.com/javatech/files/layout/assan/vavatech/img/content/css_nowe_logo.png?1615208030" height="50px" width="50px"/> | Content Cell
+CSS  | <img src="https://fs.siteor.com/javatech/files/layout/assan/vavatech/img/content/css_nowe_logo.png?1615208030" height="50px" width="50px"/> | https://css-tricks.com/
+Javascript| picture | link 
  
 
  
