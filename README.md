@@ -45,7 +45,10 @@ CSS  | <img src="https://fs.siteor.com/javatech/files/layout/assan/vavatech/img/
 Javascript| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" height="50px" width="50px"/> | https://www.javascript.com/
 Bootstrap 4.6|<img src="https://mpng.subpng.com/20180531/sas/kisspng-bootstrap-react-software-framework-javascript-fron-5b0f9b1ab26fd7.9058729715277494027309.jpg" width="50px" height="50px" /> | https://react-bootstrap.github.io/ 
 Material UI |<img src="https://material-ui.com/static/logo.png" width="50px" height="50px" /> | https://material-ui.com/
- 
+Chartjs |<img src="https://www.chartjs.org/img/chartjs-logo.svg" width="50px" height="50px"/> | https://www.npmjs.com/package/react-chartjs-2
+Nodejs |<img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png" height="50px" width="50px"/> | https://nodejs.org/en/
+MySQL | <img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" width="50px" height="50px"/> | https://www.mysql.com/
+ExhangeRate-api |<img src="https://www.exchangerate-api.com/img/logo-medium-invert-half-rc.png" width="50px" height="50px" />|https://www.exchangerate-api.com/
 
- 
+
  
