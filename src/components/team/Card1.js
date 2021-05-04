@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import './Card.css';
+import './team.css';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
-function Card ({ name,job,about}) {
+function Card1 ({ name,job,about}) {
    
     return (
         <div className='Card'>
@@ -18,17 +18,17 @@ function Card ({ name,job,about}) {
             <div className='lower-container'>
                 <h3> { name } </h3>
                 <h4> { job } </h4>
-                <p> { about } </p>
+                <p> Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
                 <button>Visit profile</button>
                 <div className='social-container'>
                   
-                     <a href=''
+                     <a href='https://www.linkedin.com/in/francisco-javier-gonzalez-505559150/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACRjkJUB6TmMZ0nhPYMdqlnOafy_u3pxZWU'
                     className= 'linkedin Social'>
                         
                         <LinkedInIcon  />
                         </a>
 
-                    <a href=''
+                    <a href='https://github.com/harvgonzalez'
                     className= 'github Social'>
                         
                         
@@ -43,4 +43,4 @@ function Card ({ name,job,about}) {
     )
 }
 
-export default Card;
+export default Card1;

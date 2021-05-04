@@ -1,4 +1,117 @@
-.container-box{
+.Team {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+
+.Card {
+    width: 300px;
+    height: 480px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 1px 10px 1px black;
+    overflow: auto;
+    
+}
+.upper-container {
+    height: 100px;
+    background: linear-gradient(to left, #060B26,#2991cc);
+}
+.img-container img{
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    transform: translate(95px,45px);
+}
+img {
+    border: 2px solid #8c00b9;
+}
+
+.lower-container {
+    margin-top: 60px;
+    height: 300px;
+    background: white;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+
+}
+
+.lower-container h3,h4,p{
+margin: 0;
+padding: 0;
+}
+.lower-container h3{
+    color: #2f2d2e;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.lower-container h4{
+    color: #8e00b9;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.lower-container p{
+    margin: 1rem;
+    color: #2f2d2e;
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+button{
+    margin: 1rem;
+    margin-top: 0;
+    color: #2f2d2e;
+    font: bold;
+    background-color: white;
+    border: 2px solid  #2991cc;
+    padding: 0.6rem;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+}
+
+button:hover{
+    background-image: linear-gradient(to left, #060B26, #2991cc);
+    transform: scale(1.2);
+    border: none;
+    color: white;
+
+
+
+}
+
+.social-container {
+    
+    background: linear-gradient(to left,#060B26, #2991cc);
+    
+}
+a.Social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+   
+    
+}
+a.Social:hover {
+    transform: translateY(-2px);
+}
+
+ a.linkedin {
+    color: white;
+}
+a.github {
+    color: white;
+}
+/* .container-box{
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
@@ -13,4 +126,4 @@
     width: 400px; 
     border: 2px solid grey; 
     margin: 10px;
-}
+} */

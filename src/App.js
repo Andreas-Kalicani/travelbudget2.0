@@ -51,18 +51,18 @@ function App() {
             {...props} />
           }
         />
-        
         <Route
         exact path="/team"
         render={props =>
         
         
-        <Team/>
+        <Team{...props} />
         
-        {...props} />
+        
       
         }
         />
+      
 
       </Switch> 
     </div>

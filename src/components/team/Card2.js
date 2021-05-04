@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import './Card.css';
+import './team.css';
+
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
 
-function Card1 ({ name,job,about}) {
+function Card2 ({ name,job,about}) {
    
     return (
         <div className='Card'>
@@ -17,7 +18,7 @@ function Card1 ({ name,job,about}) {
             <div className='lower-container'>
                 <h3> { name } </h3>
                 <h4> { job } </h4>
-                <p> { about } </p>
+                <p> Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
                 <button>Visit profile</button>
 
                 <div className='social-container'>
@@ -27,7 +28,7 @@ function Card1 ({ name,job,about}) {
                         <LinkedInIcon   />
                         </a>
 
-                    <a href=''
+                    <a href='https://github.com/Andreaskalicani'
                     className= 'github Social'>
                         
                         
@@ -42,4 +43,4 @@ function Card1 ({ name,job,about}) {
     )
 }
 
-export default Card1;
+export default Card2;

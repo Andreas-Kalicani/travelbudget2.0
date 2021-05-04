@@ -140,8 +140,6 @@ export default function InputForm({
     setDestinationCurrencyCode,
     setDays,
     days,
-    budgetNameText,
-    setsBudgetName
     }){
 
 
@@ -171,10 +169,6 @@ export default function InputForm({
 
 
     //handlers
-    const handleBudgetName = (e)=>{
-        setsBudgetName(e.target.value);
-
-    }
     const handleInputBudgetChange =(e)=>{
         setBudget(e.target.value);
         
@@ -213,7 +207,7 @@ export default function InputForm({
     return (
         <Container>
             <GlobalStyle/>
-            <h1>{budgetNameText}</h1>
+            
             <FormWrapper>
                 
                 <Form className="InputForm-form" onSubmit={handleSubmit}>
@@ -227,7 +221,7 @@ export default function InputForm({
                     name="inputBudget"
                     type='text'
                     placeholder= "Trip to Berlin"
-                    onChange={handleBudgetName }
+                    
                     /* value={budgetName}
                     onChange={handleInputBudgetNameChange} */
                     /* required */
@@ -328,7 +322,7 @@ export default function InputForm({
                 <div>
                 {
                     apiLoaded &&
-                <h1>{budgetNameText}Data Return: {isNaN(conversionResult) ? "Introduce un valor" : conversionResult } {destinationCurrencyCode} </h1>
+                <h1>Data Return: {isNaN(conversionResult) ? "Introduce un valor" : conversionResult } {destinationCurrencyCode} </h1>
                 }
             
                 </div>
