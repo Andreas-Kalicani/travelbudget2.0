@@ -50,5 +50,13 @@ Nodejs |<img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_
 MySQL | <img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" width="50px" height="50px"/> | https://www.mysql.com/
 ExhangeRate-api |<img src="https://www.exchangerate-api.com/img/logo-medium-invert-half-rc.png" width="70px" height="70px" />|https://www.exchangerate-api.com/
 
+## Set up
+
+The first thing we need to do is to Clone the git repository 
+
+### Step 1
+
+<img width="1007" alt="Skjermbilde 2021-05-04 kl  17 06 22" src="https://user-images.githubusercontent.com/53916979/117025297-14c29f80-acfb-11eb-995e-5e65cbc7aee6.png">
+
 
  
