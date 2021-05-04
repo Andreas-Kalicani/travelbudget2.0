@@ -5,7 +5,10 @@ It also check the currency in the country and also change the currency in the co
 The following stack for this project is 
 React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-2,  Nodejs, MySQL and exhangeRate-API.  
 
-<li>General info</li> 
+## Table of content
+<li>General info ℹ️</li> 
+<li>Technologies 📱</li>
+<li>Set up 🏁</li>
 
 ## Introduction 
  
@@ -31,6 +34,9 @@ React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-
  From there we startet our project to find this solution. 
  
  ## Technologies 
+ 
+ The technologies and libraries we used for this project. 
+ Will be listet down here 
  
  
  
