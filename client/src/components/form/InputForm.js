@@ -155,29 +155,36 @@ export default function InputForm(){
         getCountriesList().then((data)=>setDataCountries(data))
             
     },[])
-    console.log(countries)
+   
  
    
 
     // the total number of days of duration of the trip
     
+    useEffect(() => {
+        context.setDays (Math.ceil((endDate- startDate.getTime())/(1000*60*60*24)))
+            
+    },[])
 
-    context.setDays (Math.ceil((endDate- startDate.getTime())/(1000*60*60*24)))
+    
     
 
     //Find the Currency Code of the country Choosen 
-    context.setOriginCurrencyCode (countries.find((country) => 
+    useEffect(() => {
+        context.setOriginCurrencyCode (countries.find((country) => 
         country.countryName===context.homeCountry) ? countries.find((country) => 
         country.countryName===context.homeCountry).currencyCode  : "Error");
-    
+    })
 
     
-    context.setDestinationCurrencyCode (countries.find((country) => 
+    useEffect(() => {
+        context.setDestinationCurrencyCode (countries.find((country) => 
         country.countryName===context.destinationCountry
         ) ? countries.find((country) => 
-        country.countryName === context.destinationCountry).currencyCode : "Error"); 
-    
+        country.countryName === context.destinationCountry).currencyCode : "Error");
+    })
 
+    
 
     //handlers
 
@@ -211,8 +218,7 @@ export default function InputForm(){
             return;
         }
         context.setError(false)
-        console.log(startDate)
-        console.log(context.days)
+        
         history.push('/dashboard');
        
         fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${context.originCurrencyCode}/${context.destinationCurrencyCode}/${context.inputBudget}`,{
