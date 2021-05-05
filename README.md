@@ -16,12 +16,13 @@ React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-
  Three of us from Madrid and one from Barcelona. 
  We were assigned our second project of the bootcamp -create a React app using an API of our choice.
  
- How we came up with with this idea of a Travel budget application? 
- All four of us, had experience travelling and love to explore the world. 
- We wanted to come up with an idea that can solve 
- a problem common with travellers when it comes to managing their finances during a trip. 
+ How we came up with with this idea of an Travel budget application. 
+ Is because all four of us, has experience of traveling and love to explore the world. 
+ We wanted to come out with an idea how we could solve 
+ a problem that is the most common by travelers when traveling("At least few of them"). 
  How to keep track of there expenses and how much you have left spending of your trip. 
  It is easy to spend money when you are having a good time. 
+ At least that we are experiencing. 
  
  Thats why we came up with an idea, why not have an application
  where you can keep track of all of your expenses and how much you have left in one Application. 
@@ -47,6 +48,7 @@ Chartjs |<img src="https://www.chartjs.org/img/chartjs-logo.svg" width="50px" he
 Nodejs |<img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png" height="50px" width="50px"/> | https://nodejs.org/en/
 MySQL | <img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" width="50px" height="50px"/> | https://www.mysql.com/
 ExhangeRate-api |<img src="https://www.exchangerate-api.com/img/logo-medium-invert-half-rc.png" width="70px" height="70px" />|https://www.exchangerate-api.com/
+
 
 ## Set up
 
