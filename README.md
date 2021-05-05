@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# TravelBudget2.0 
+Simple travel budget app that can calculate  your expenses and keep control
+of how much you can spend and what you have spent on your travels. 
+It also check the currency in the country and also change the currency in the country you are in with a use of an API called exangeRate-api. 
+The following stack for this project is 
+React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-2,  Nodejs, MySQL and exhangeRate-API.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of content
+<li>General info ℹ️</li> 
+<li>Technologies 📱</li>
+<li>Set up 🏁</li>
 
-## Available Scripts
+## Introduction 
+ 
+ We are a group of four people that is studying at a bootcamp called Wild Code School. 
+ There are three people from Madrid and one from Barcelona Campus. 
+ We was a assign for our second project of the bootcamp. 
+ To create a project by using React and with a use of an API of our choice.
+ 
+ How we came up with with this idea of an Travel budget application. 
+ Is because all four of us, has experience of traveling and love to explore the world. 
+ We wanted to come out with an idea how we could solve 
+ a problem that is the most common by travelers when traveling("At least few of them"). 
+ How to keep track of there expenses and how much you have left spending of your trip. 
+ It is easy to spend money when you are having a good time. 
+ At least that we are experiencing. 
+ 
+ Thats why we came up with an idea, why not have an application
+ where you can keep track of all of your expenses and how much you have left in one Application. 
+ Also to check the amout of the currency you have saved to the country you are visiting.
+ In that way it is actually more easier to keep track and more accurate to see how much you
+ have left of our budget. 
+ 
+ From there we startet our project to find this solution. 
+ 
+ ## Technologies 
+ 
+ The technologies and libraries we used for this project. 
+ Will be listet down here 
 
-In the project directory, you can run:
+Technologies | Images | link
+| :--- | ---: | :---:
+React  | <img src="https://doc.castsoftware.com/download/thumbnails/418185647/CAST_ReactJS_Application.jpg?version=1&modificationDate=1593447628930&api=v2" width="50px" height="50px"/> | https://reactjs.org/
+CSS  | <img src="https://fs.siteor.com/javatech/files/layout/assan/vavatech/img/content/css_nowe_logo.png?1615208030" height="50px" width="50px"/> | https://css-tricks.com/
+Javascript| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" height="50px" width="50px"/> | https://www.javascript.com/
+Bootstrap 4.6|<img src="https://mpng.subpng.com/20180531/sas/kisspng-bootstrap-react-software-framework-javascript-fron-5b0f9b1ab26fd7.9058729715277494027309.jpg" width="50px" height="50px" /> | https://react-bootstrap.github.io/ 
+Material UI |<img src="https://material-ui.com/static/logo.png" width="50px" height="50px" /> | https://material-ui.com/
+Chartjs |<img src="https://www.chartjs.org/img/chartjs-logo.svg" width="50px" height="50px"/> | https://www.npmjs.com/package/react-chartjs-2
+Nodejs |<img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png" height="50px" width="50px"/> | https://nodejs.org/en/
+MySQL | <img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" width="50px" height="50px"/> | https://www.mysql.com/
+ExhangeRate-api |<img src="https://www.exchangerate-api.com/img/logo-medium-invert-half-rc.png" width="70px" height="70px" />|https://www.exchangerate-api.com/
 
-### `yarn start`
+## Set up
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The first thing we need to do is to Clone the git repository 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Step 1
 
-### `yarn test`
+The first thing we need to do is to Clone the git repository 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="1007" alt="Skjermbilde 2021-05-04 kl  17 06 22" src="https://user-images.githubusercontent.com/53916979/117025297-14c29f80-acfb-11eb-995e-5e65cbc7aee6.png">
 
-### `yarn build`
+<img width="1080" alt="Skjermbilde 2021-05-04 kl  17 10 13" src="https://user-images.githubusercontent.com/53916979/117025964-a6caa800-acfb-11eb-951f-86646655384e.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### step 2
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To change to the correct directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="820" alt="Skjermbilde 2021-05-04 kl  17 12 13" src="https://user-images.githubusercontent.com/53916979/117026234-e85b5300-acfb-11eb-98ef-83d6f5f73ad0.png">
 
-### `yarn eject`
+### step 3
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Do an NPM install 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+$ npm install 
+and then you do and npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+$npm start 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Then you are ready to go 🏁
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
