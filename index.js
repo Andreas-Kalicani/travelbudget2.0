@@ -2,6 +2,7 @@ const express =require ("express");
 const pool =require("./config")
 const app= express();
 const cors= require("cors");
+const path = require('path')
 const port = process.env.PORT || 5000 ; 
 
 // global middleware
