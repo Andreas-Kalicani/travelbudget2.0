@@ -12,10 +12,9 @@ React, style components, css, javascript, Bootstrap, Material UI, React-chartjs-
 
 ## Introduction 
  
- We are a group of four people that is studying at a bootcamp called Wild Code School. 
- There are three people from Madrid and one from Barcelona Campus. 
- We was a assign for our second project of the bootcamp. 
- To create a project by using React and with a use of an API of our choice.
+ We are a group of four students of Wild Code School. 
+ Three of us from Madrid and one from Barcelona. 
+ We were assigned our second project of the bootcamp -create a React app using an API of our choice.
  
  How we came up with with this idea of an Travel budget application. 
  Is because all four of us, has experience of traveling and love to explore the world. 
