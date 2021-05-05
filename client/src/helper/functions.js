@@ -8,6 +8,6 @@ export const tomorrowDay=()=>{
 
 //Api Call to DB
 export const getCountriesList =()=>(
-    fetch("http://localhost:5000/countries")
+    fetch("/countries")
         .then(response=>(response.json()))
     )
