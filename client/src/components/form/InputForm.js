@@ -218,9 +218,7 @@ export default function InputForm(){
             return;
         }
         context.setError(false)
-        
-        history.push('/dashboard');
-       
+        /* history.push('/dashboard'); */
         fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${context.originCurrencyCode}/${context.destinationCurrencyCode}/${context.inputBudget}`,{
             /* mode:'cors' */
         })
