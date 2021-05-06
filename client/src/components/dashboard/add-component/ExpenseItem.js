@@ -55,17 +55,7 @@ const ItemLi = styled.li`
     border-top-right-radius: inherit;
     font-weight:bold;
     color:${props=>props.theme.colors.primary};
-    /* &:last-child{
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    }
-
-    &:last-child{
-    border-bottom-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    }
- */
-
+    
 `
 
 const DescriptionContainer = styled.div`

@@ -2,9 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 
 // import 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'
 // import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'
-import Budget from './Budget';
-import Remaining from './Remaining'
-import ExpenseTotal from './ExpenseTotal';
+
 import ExpenseList from './ExpenseList';
 import AddExpenseForm from './AddExpenseForm';
 import './statusBudget.css'

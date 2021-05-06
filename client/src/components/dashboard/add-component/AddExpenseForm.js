@@ -215,12 +215,12 @@ const AddExpenseForm = () => {
                           required="required" 
                           type="text"
                           id="category" 
-                          // value="{category}"
+                          
                           
                           name={category}
                           onChange={event=> setCategory(event.target.value)}
                       >
-                          <option value="">-Selecciona Categoría-</option>
+                          <option value="">-Choose a category-</option>
                           {categories.map((category, index) => (
                               <option 
                                   key={index} 
