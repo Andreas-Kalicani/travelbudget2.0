@@ -82,9 +82,9 @@ Then you are ready to go 🏁
 
 ## Team 
 
-<li> SergKcode[https://github.com/SergKcode] </li>
-<li>[harvgonzalez](https://github.com/harvgonzalez)</li>
-<li>[AndreasKalicani](https://github.com/Andreaskalicani)</li>
-[link to Google!](http://google.com)
+- [SergKcode](https://github.com/SergKcode)
+- [harvgonzalez](https://github.com/harvgonzalez)
+- [AndreasKalicani](https://github.com/Andreaskalicani)
+
 
 
