@@ -82,7 +82,7 @@ Then you are ready to go 🏁
 
 ## Team 
 
-<li>[SergKcode](https://github.com/SergKcode) </li>
+<li>[SergKcode https://github.com/SergKcode] </li>
 <li>[harvgonzalez](https://github.com/harvgonzalez)</li>
 <li>[AndreasKalicani](https://github.com/Andreaskalicani)</li>
  
