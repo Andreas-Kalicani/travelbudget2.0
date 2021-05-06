@@ -1,7 +1,4 @@
-
-
 import React, {useState} from 'react';
-
 import Card4 from './Card4'
 import Card1 from './Card1'
 import Card2 from './Card2'
