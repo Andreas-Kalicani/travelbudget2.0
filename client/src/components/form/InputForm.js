@@ -222,7 +222,7 @@ export default function InputForm(){
         fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${context.originCurrencyCode}/${context.destinationCurrencyCode}/${context.inputBudget}`,{
             /* mode:'cors' */
         })
-            .then(response=> console.log (response.json()))
+            .then(response=> response.json())
             .then((data)=>{ 
                 context.setConversionResult(Math.round(data.conversion_result * 100) / 100);
                 context.setApiLoaded(true)
