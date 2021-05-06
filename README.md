@@ -79,6 +79,10 @@ $npm start
 
 Then you are ready to go 🏁
 
->>>>>>> f820c93b325fee69fc01a660fb5cc97750108308
 
+## Team 
+
+<li>[SergKcode](https://github.com/SergKcode) </li>
+<li>[harvgonzalez](https://github.com/harvgonzalez)</li>
+<li>[AndreasKalicani](https://github.com/Andreaskalicani)</li>
  
