@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import {HorizontalBar} from "react-chartjs-2";
+import { AppContext } from '../../context/AppContext';
+
 import styled from 'styled-components';
 
 const HorizontalContainer = styled.div`
@@ -37,18 +39,28 @@ border-radius: 10px;
 `
 
 const ChartHorizontal = () =>{
+    const { expenses } = useContext(AppContext);
+    let categoryExpense= expenses.reduce((total, item) => {
+    
+        if(total[item.category]){
+          total[item.category] += item.cost;
+        }else{
+          total[item.category]= item.cost
+        }
+        return total;
+        }, {})
     return (
         <HorizontalContainer>
             <StyledChartBox>
             <HeaderChart>Expenses by category</HeaderChart>
             <HorizontalBar 
             data = {{
-                labels: ["Entertainment", "Food", "Travels", "Others"],
+                labels: ["Food", "Transport", "Accomodation", "Activites", "Insurance", "Gifts", "Others"],
                 datasets: [
                     {
                         label: "The data of my Expenses", 
                         backgroundColor: ["#ea5455", "#7367f0", "#f55555", "#e80505"], 
-                        data: [65, 59, 79, 40]
+                        data: [categoryExpense.food, categoryExpense.transport, categoryExpense.accomodation, categoryExpense.activities, categoryExpense.insurance, categoryExpense.gifts, categoryExpense.others]
                     }
                 ]
             }}
