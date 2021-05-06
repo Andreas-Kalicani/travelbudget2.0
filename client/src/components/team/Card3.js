@@ -11,7 +11,7 @@ function Card3 ({ name,job,about}) {
         <div className='Card'>
             <div className= 'upper-container'>
                 <div className= 'img-container'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH8k6gAP4V6O20oEcHvwnNFBq9R9vx4MB8pQ&usqp=CAU" alt='' height='100px' width='100px' />
+                    <img src="/images/download.png" alt='' height='100px' width='100px' />
                 </div>
             </div>
             <div className='lower-container'>

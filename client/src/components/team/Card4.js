@@ -10,7 +10,7 @@ function Card4 ({ name,job,about}) {
         <div className='Card'>
             <div className= 'upper-container'>
                 <div className= 'img-container'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQya-Oq_1bFmRFwTsIZLGGwqw8Car70C3lK4A&usqp=CAU" alt='' height='100px' width='100px' />
+                    <img src="/images/Sergio.png" alt='' height='100px' width='100px' />
                 </div>
             </div>
             <div className='lower-container'>

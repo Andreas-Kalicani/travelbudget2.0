@@ -12,7 +12,7 @@ function Card2 ({ name,job,about}) {
         <div className='Card'>
             <div className= 'upper-container'>
                 <div className= 'img-container'>
-                    <img src="/images/Andres IMG_0179.jpeg" alt='' height='100px' width='100px' />
+                    <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGeWuqQQ-kDCw/profile-displayphoto-shrink_800_800/0/1620292610495?e=1625702400&v=beta&t=LWgjKMjHAq_x0VrThwUxIjvkxmVEW9B3_9zOYDS-qbM" alt='' height='100px' width='100px' />
                 </div>
             </div>
             <div className='lower-container'>
