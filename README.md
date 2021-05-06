@@ -85,4 +85,5 @@ Then you are ready to go 🏁
 <li>[SergKcode] (https://github.com/SergKcode) </li>
 <li>[harvgonzalez](https://github.com/harvgonzalez)</li>
 <li>[AndreasKalicani](https://github.com/Andreaskalicani)</li>
- [I'm an inline-style link](https://www.google.com)
+ [GitHub](http://github.com)
+
