@@ -1,9 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../../../context/AppContext';
 import {v4 as uuid4 } from 'uuid';
-// material-ui imports below
 import { withStyles } from '@material-ui/core/styles';
-/* import Button from '@material-ui/core/Button'; */
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
@@ -215,12 +213,12 @@ const AddExpenseForm = () => {
                           required="required" 
                           type="text"
                           id="category" 
-                          // value="{category}"
+                          
                           
                           name={category}
                           onChange={event=> setCategory(event.target.value)}
                       >
-                          <option value="">-Selecciona Categoría-</option>
+                          <option value="">-Choose a category-</option>
                           {categories.map((category, index) => (
                               <option 
                                   key={index} 

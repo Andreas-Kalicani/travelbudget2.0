@@ -8,7 +8,8 @@ const ExpenseList = () =>{
     return(
         <ul className="list-group">
             {expenses.map((expense)=>(
-                <ExpenseItem 
+                <ExpenseItem
+                key={expense.id}
                 id={expense.id} 
                 name={expense.name} 
                 cost={expense.cost}

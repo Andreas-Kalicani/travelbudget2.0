@@ -47,13 +47,13 @@ function App() {
         
         />  */}
 
-      <Route
+        {apiLoaded && <Route
         exact path="/reports"
         render={props =>
         <Report
         {...props}/>
         }
-        />
+        />}
         
         
         <Route

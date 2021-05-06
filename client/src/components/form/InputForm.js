@@ -164,7 +164,7 @@ export default function InputForm(){
     useEffect(() => {
         context.setDays (Math.ceil((endDate- startDate.getTime())/(1000*60*60*24)))
             
-    },[])
+    })
 
     
     

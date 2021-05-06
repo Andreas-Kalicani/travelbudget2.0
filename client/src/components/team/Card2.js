@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './team.css';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
