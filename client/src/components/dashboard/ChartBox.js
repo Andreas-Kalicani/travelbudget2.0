@@ -41,7 +41,7 @@ const ChartBox= () => {
     return (
         <ChartContainer>
             <StyledChartBox> 
-            <HeaderChart>Budget Expense</HeaderChart>
+            <HeaderChart>Remaining</HeaderChart>
             <Chart2 className="chart2" height={500} width={100} />
             </StyledChartBox>
             <StyledChartBox>
