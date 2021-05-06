@@ -218,11 +218,13 @@ export default function InputForm(){
             return;
         }
         context.setError(false)
-        /* history.push('/dashboard'); */
+        history.push('/dashboard');
         fetch(`https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_APIKEY }/pair/${context.originCurrencyCode}/${context.destinationCurrencyCode}/${context.inputBudget}`,{
             /* mode:'cors' */
         })
-            .then(response=> response.json())
+            .then(response=> {
+                console.log (response.json())
+                return response.json()})
             .then((data)=>{ 
                 context.setConversionResult(Math.round(data.conversion_result * 100) / 100);
                 context.setApiLoaded(true)
@@ -342,10 +344,7 @@ export default function InputForm(){
                 </Form>
                
                 <div>
-                {/* {
-                    context.apiLoaded &&
-                <h1>Data Return: {isNaN(context.conversionResult) ? "Introduce un valor" : context.conversionResult } {context.destinationCurrencyCode} </h1>
-                } */}
+                
             
                 </div>
 
