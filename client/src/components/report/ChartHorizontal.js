@@ -58,8 +58,8 @@ const ChartHorizontal = () =>{
                 labels: ["Food", "Transport", "Accomodation", "Activites", "Insurance", "Gifts", "Others"],
                 datasets: [
                     {
-                        label: "The data of my Expenses", 
-                        backgroundColor: ["#ea5455", "#7367f0", "#f55555", "#e80505"], 
+                        label: "Categories", 
+                        backgroundColor: ["#4198D7", "#D8B656", "#7A61BA", "#45D39A", "#E55859", "#FC9D5A", "#90DCD0"], 
                         data: [categoryExpense.food, categoryExpense.transport, categoryExpense.accomodation, categoryExpense.activities, categoryExpense.insurance, categoryExpense.gifts, categoryExpense.others]
                     }
                 ]

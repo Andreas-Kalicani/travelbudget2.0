@@ -20,7 +20,7 @@ const ChartLeft = () =>{
     //   <p>Budget: {budget} Spent: {totalExpenses}</p> 
     <Chartnigga> 
         <Doughnut className="chart1" height={50} width={0} data = {{
-            labels: ["My Budget"], 
+            labels: ["Budget", "Spent"], 
         
             datasets: [
                 {

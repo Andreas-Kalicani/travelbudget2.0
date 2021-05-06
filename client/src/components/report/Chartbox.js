@@ -40,11 +40,11 @@ const Chartbox= () => {
     return (
         <ChartContainer>
             <StyledChartBox> 
-            <HeaderChart>Budget Expense</HeaderChart>
+            <HeaderChart>Your Balance</HeaderChart>
             <ChartLeft className="chart2" height={500} width={100} />
             </StyledChartBox>
             <StyledChartBox>
-            <HeaderChart>Expense</HeaderChart>
+            <HeaderChart>Your Trip</HeaderChart>
               <ChartRight/>
              </StyledChartBox>
         </ChartContainer>

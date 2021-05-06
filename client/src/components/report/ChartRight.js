@@ -9,24 +9,24 @@ const Chartnigga=styled.div`
 `
 
 const ChartRight = () => {
-    const { expenses } = useContext(AppContext);
-    let categoryExpense= expenses.reduce((total, item) => {
+    // const { expenses } = useContext(AppContext);
+    // let categoryExpense= expenses.reduce((total, item) => {
     
-        if(total[item.category]){
-          total[item.category] += item.cost;
-        }else{
-          total[item.category]= item.cost
-        }
-        return total;
-        }, {})
+    //     if(total[item.category]){
+    //       total[item.category] += item.cost;
+    //     }else{
+    //       total[item.category]= item.cost
+    //     }
+    //     return total;
+    //     }, {})
     return (
            
            <Chartnigga>
             <Doughnut 
              options={{responsive: true, maintainAspectRatio: false}} height={50} data={{
-                labels: ["expenses", "budget"], 
+                labels: ["Days", "Total Days"], 
                 datasets:[{
-                    data: [categoryExpense.food, categoryExpense.transport, categoryExpense.accomodation, categoryExpense.activities, categoryExpense.insurance, categoryExpense.gifts, categoryExpense.others],
+                    data: [1, 7],
                     label: "first dataset", 
                     backgroundColor: ["red", "blue"]
                     
