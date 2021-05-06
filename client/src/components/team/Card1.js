@@ -11,7 +11,7 @@ function Card1 ({ name,job,about}) {
         <div className='Card'>
             <div className= 'upper-container'>
                 <div className= 'img-container'>
-                    <img src="https://img2.freepng.es/20180623/iqh/kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c40ce333.6524068515297806760528.jpg" alt='' height='100px' width='100px' />
+                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGFCuqkmakdrQ/profile-displayphoto-shrink_800_800/0/1605196154976?e=1625702400&v=beta&t=S04PQL8q7m1UigaTGU9DKzrpnbIpgtKmr2K1d9QXBCs" alt='' height='100px' width='100px' />
                     
                 </div>
             </div>
